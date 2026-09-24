@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="520" viewBox="0 0 1040 520" role="img" aria-labelledby="title desc">
+  <title id="title">行波进位加减法器</title>
+  <desc id="desc">SUB 控制信号同时控制 B 的按位取反与最低位进位，四个全加器串联构成加减法器。</desc>
+  <defs><style>
+    text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.t{font-size:29px;font-weight:700}.h{font-size:21px;font-weight:700}.s{font-size:16px}.m{font-size:20px;font-weight:700;fill:#7c2d12}
+    .fa{fill:#dbeafe;stroke:#2563eb;stroke-width:2}.xor{fill:#ffedd5;stroke:#ea580c;stroke-width:2}.wire{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#a)}.ctrl{stroke:#dc2626;stroke-width:2;fill:none;marker-end:url(#r)}
+  </style><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker><marker id="r" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker></defs>
+  <rect width="1040" height="520" rx="18" fill="#f8fafc"/>
+  <text x="520" y="45" text-anchor="middle" class="t">4 位行波进位加法器 / 减法器</text>
+  <text x="520" y="82" text-anchor="middle" class="h">A − B = A + (~B) + 1</text>
+  <g text-anchor="middle">
+    <rect class="fa" x="90" y="245" width="150" height="95" rx="12"/><text class="h" x="165" y="282">1-bit FA</text><text class="s" x="165" y="312">bit 0</text>
+    <rect class="fa" x="330" y="245" width="150" height="95" rx="12"/><text class="h" x="405" y="282">1-bit FA</text><text class="s" x="405" y="312">bit 1</text>
+    <rect class="fa" x="570" y="245" width="150" height="95" rx="12"/><text class="h" x="645" y="282">1-bit FA</text><text class="s" x="645" y="312">bit 2</text>
+    <rect class="fa" x="810" y="245" width="150" height="95" rx="12"/><text class="h" x="885" y="282">1-bit FA</text><text class="s" x="885" y="312">bit 3 / MSB</text>
+    <rect class="xor" x="125" y="150" width="80" height="48" rx="24"/><text class="h" x="165" y="180">XOR</text>
+    <rect class="xor" x="365" y="150" width="80" height="48" rx="24"/><text class="h" x="405" y="180">XOR</text>
+    <rect class="xor" x="605" y="150" width="80" height="48" rx="24"/><text class="h" x="645" y="180">XOR</text>
+    <rect class="xor" x="845" y="150" width="80" height="48" rx="24"/><text class="h" x="885" y="180">XOR</text>
+  </g>
+  <g class="s"><text x="105" y="228">A₀</text><text x="345" y="228">A₁</text><text x="585" y="228">A₂</text><text x="825" y="228">A₃</text><text x="130" y="132">B₀</text><text x="370" y="132">B₁</text><text x="610" y="132">B₂</text><text x="850" y="132">B₃</text></g>
+  <path class="wire" d="M115 220 V245"/><path class="wire" d="M355 220 V245"/><path class="wire" d="M595 220 V245"/><path class="wire" d="M835 220 V245"/>
+  <path class="wire" d="M165 198 V240"/><path class="wire" d="M405 198 V240"/><path class="wire" d="M645 198 V240"/><path class="wire" d="M885 198 V240"/>
+  <path class="wire" d="M240 292 H325"/><text x="278" y="278" class="s">c₁</text><path class="wire" d="M480 292 H565"/><text x="518" y="278" class="s">c₂</text><path class="wire" d="M720 292 H805"/><text x="758" y="278" class="s">c₃</text><path class="wire" d="M960 292 H1015"/><text x="985" y="278" class="s">c₄</text>
+  <g class="h" text-anchor="middle"><text x="165" y="385">S₀</text><text x="405" y="385">S₁</text><text x="645" y="385">S₂</text><text x="885" y="385">S₃</text></g><path class="wire" d="M165 340 V370"/><path class="wire" d="M405 340 V370"/><path class="wire" d="M645 340 V370"/><path class="wire" d="M885 340 V370"/>
+  <text x="55" y="170" class="m">SUB</text><path class="ctrl" d="M80 174 H120"/><path class="ctrl" d="M75 185 V292 H85"/><text x="55" y="315" class="s">c₀=SUB</text><path class="ctrl" d="M80 174 H360"/><path class="ctrl" d="M80 174 H600"/><path class="ctrl" d="M80 174 H840"/>
+  <text x="520" y="445" text-anchor="middle" class="h">SUB=0：B 不变、c₀=0 → 加法　　SUB=1：B 逐位取反、c₀=1 → 减法</text>
+  <text x="520" y="486" text-anchor="middle" class="s">有符号溢出：进入 MSB 的进位 c₃ XOR 离开 MSB 的进位 c₄ = 1</text>
+</svg>

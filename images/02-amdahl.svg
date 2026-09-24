@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
+  <title id="title">Amdahl 定律</title>
+  <desc id="desc">只有可加速部分缩短，不可加速部分成为总性能上限，并展示 10% 加速 20 倍和 90% 加速 1.2 倍的比较。</desc>
+  <defs><style>
+    text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.t{font-size:29px;font-weight:700}.f{font-size:25px;font-weight:700}.h{font-size:20px;font-weight:700}.s{font-size:17px}
+    .fixed{fill:#cbd5e1}.fast{fill:#60a5fa}.new{fill:#34d399}.axis{stroke:#475569;stroke-width:2}
+  </style></defs>
+  <rect width="1000" height="520" rx="18" fill="#f8fafc"/>
+  <text x="500" y="48" text-anchor="middle" class="t">Amdahl 定律：总收益取决于“原来占多少时间”</text>
+  <text x="500" y="92" text-anchor="middle" class="f">Speedup = 1 / [(1 − F) + F / S]</text>
+  <text x="90" y="156" class="h">优化前</text><rect class="fixed" x="180" y="125" width="450" height="54"/><rect class="fast" x="630" y="125" width="250" height="54"/><text x="405" y="159" text-anchor="middle" class="s">不可加速部分 (1−F)</text><text x="755" y="159" text-anchor="middle" class="s">可加速部分 F</text>
+  <text x="90" y="236" class="h">优化后</text><rect class="fixed" x="180" y="205" width="450" height="54"/><rect class="new" x="630" y="205" width="75" height="54"/><text x="405" y="239" text-anchor="middle" class="s">时间不变</text><text x="667" y="239" text-anchor="middle" class="s">F/S</text>
+  <line class="axis" x1="180" y1="283" x2="880" y2="283"/><text x="180" y="310" class="s">0</text><text x="880" y="310" text-anchor="end" class="s">原总时间 = 1</text>
+  <g text-anchor="middle">
+    <rect x="80" y="350" width="390" height="110" rx="14" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+    <text x="275" y="385" class="h">10% 的时间加速 20 倍</text><text x="275" y="420" class="f">1 / (0.9 + 0.1/20) = 1.105×</text><text x="275" y="448" class="s">局部很快，总收益仍小</text>
+    <rect x="530" y="350" width="390" height="110" rx="14" fill="#ecfdf5" stroke="#34d399" stroke-width="2"/>
+    <text x="725" y="385" class="h">90% 的时间加速 1.2 倍</text><text x="725" y="420" class="f">1 / (0.1 + 0.9/1.2) = 1.176×</text><text x="725" y="448" class="s">让常见情况更快</text>
+  </g>
+</svg>

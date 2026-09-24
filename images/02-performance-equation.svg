@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="410" viewBox="0 0 980 410" role="img" aria-labelledby="title desc">
+  <title id="title">CPU 性能铁律</title>
+  <desc id="desc">CPU 时间等于指令数乘平均 CPI 乘时钟周期，三个因素分别受软件、ISA、组织和工艺影响。</desc>
+  <defs><style>
+    text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.t{font-size:30px;font-weight:700}.f{font-size:31px;font-weight:700}.h{font-size:21px;font-weight:700}.s{font-size:17px}
+    .a{fill:#dbeafe;stroke:#2563eb;stroke-width:2}.b{fill:#dcfce7;stroke:#16a34a;stroke-width:2}.c{fill:#fef3c7;stroke:#d97706;stroke-width:2}.op{font-size:34px;font-weight:700;fill:#475569}
+  </style></defs>
+  <rect width="980" height="410" rx="18" fill="#f8fafc"/>
+  <text x="490" y="52" text-anchor="middle" class="t">CPU 性能“铁律”</text>
+  <text x="490" y="103" text-anchor="middle" class="f">CPU Time = IC × CPI × Clock Cycle Time</text>
+  <g text-anchor="middle">
+    <rect class="a" x="55" y="150" width="250" height="165" rx="15"/><text class="h" x="180" y="190">指令数 IC</text><text class="s" x="180" y="228">程序 / 算法</text><text class="s" x="180" y="258">编译器</text><text class="s" x="180" y="288">ISA</text>
+    <text class="op" x="330" y="240">×</text>
+    <rect class="b" x="365" y="150" width="250" height="165" rx="15"/><text class="h" x="490" y="190">平均 CPI</text><text class="s" x="490" y="228">ISA</text><text class="s" x="490" y="258">数据通路与流水线</text><text class="s" x="490" y="288">缓存 / 预测 / 调度</text>
+    <text class="op" x="640" y="240">×</text>
+    <rect class="c" x="675" y="150" width="250" height="165" rx="15"/><text class="h" x="800" y="190">时钟周期</text><text class="s" x="800" y="228">工艺</text><text class="s" x="800" y="258">关键路径</text><text class="s" x="800" y="288">流水级划分</text>
+  </g>
+  <text x="490" y="365" text-anchor="middle" class="h">三个量互相制约：优化局部时必须重新计算总执行时间</text>
+</svg>

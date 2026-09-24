@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460" role="img" aria-labelledby="title desc">
+  <title id="title">大端与小端的字节排列</title>
+  <desc id="desc">32 位数 0xFF14820E 在连续地址中的大端和小端排列。</desc>
+  <defs><style>
+    text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.t{font-size:29px;font-weight:700}.h{font-size:22px;font-weight:700}.b{font-size:23px;font-weight:700}.s{font-size:16px}.addr{font-size:15px;fill:#475569}
+    .cell{stroke:#475569;stroke-width:1.5}.c1{fill:#fee2e2}.c2{fill:#ffedd5}.c3{fill:#dcfce7}.c4{fill:#dbeafe}.arrow{stroke:#334155;stroke-width:2;marker-end:url(#a)}
+  </style><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+  <rect width="960" height="460" rx="18" fill="#f8fafc"/>
+  <text x="480" y="48" text-anchor="middle" class="t">大端与小端：只改变内存中的字节顺序</text>
+  <text x="480" y="92" text-anchor="middle" class="h">32 位数据：0xFF14820E</text>
+  <text x="130" y="165" class="h">大端</text><text x="130" y="195" class="s">最高有效字节在最低地址</text>
+  <g text-anchor="middle"><rect class="cell c1" x="330" y="135" width="120" height="72"/><text class="b" x="390" y="178">FF</text><rect class="cell c2" x="450" y="135" width="120" height="72"/><text class="b" x="510" y="178">14</text><rect class="cell c3" x="570" y="135" width="120" height="72"/><text class="b" x="630" y="178">82</text><rect class="cell c4" x="690" y="135" width="120" height="72"/><text class="b" x="750" y="178">0E</text><text class="addr" x="390" y="230">A</text><text class="addr" x="510" y="230">A+1</text><text class="addr" x="630" y="230">A+2</text><text class="addr" x="750" y="230">A+3</text></g>
+  <text x="130" y="315" class="h">小端</text><text x="130" y="345" class="s">最低有效字节在最低地址</text>
+  <g text-anchor="middle"><rect class="cell c4" x="330" y="285" width="120" height="72"/><text class="b" x="390" y="328">0E</text><rect class="cell c3" x="450" y="285" width="120" height="72"/><text class="b" x="510" y="328">82</text><rect class="cell c2" x="570" y="285" width="120" height="72"/><text class="b" x="630" y="328">14</text><rect class="cell c1" x="690" y="285" width="120" height="72"/><text class="b" x="750" y="328">FF</text><text class="addr" x="390" y="380">A</text><text class="addr" x="510" y="380">A+1</text><text class="addr" x="630" y="380">A+2</text><text class="addr" x="750" y="380">A+3</text></g>
+  <line class="arrow" x1="330" y1="420" x2="810" y2="420"/><text x="570" y="448" text-anchor="middle" class="s">地址递增方向</text>
+</svg>

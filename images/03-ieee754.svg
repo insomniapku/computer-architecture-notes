@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="460" viewBox="0 0 1040 460" role="img" aria-labelledby="title desc">
+  <title id="title">IEEE 754 单精度和双精度格式</title>
+  <desc id="desc">展示符号位、指数位和小数字段，并列出零、非规格化、有限数、无穷和 NaN 的编码。</desc>
+  <defs><style>
+    text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.t{font-size:29px;font-weight:700}.h{font-size:20px;font-weight:700}.s{font-size:16px}.f{font-size:24px;font-weight:700}
+    .sign{fill:#fecaca;stroke:#dc2626}.exp{fill:#fef3c7;stroke:#d97706}.frac{fill:#dbeafe;stroke:#2563eb}.seg{stroke-width:1.5}
+  </style></defs>
+  <rect width="1040" height="460" rx="18" fill="#f8fafc"/>
+  <text x="520" y="46" text-anchor="middle" class="t">IEEE 754 浮点表示</text>
+  <text x="520" y="86" text-anchor="middle" class="f">(−1)ˢ × (1 + F) × 2^(E−bias)</text>
+  <g dominant-baseline="middle" text-anchor="middle">
+    <text x="95" y="145" class="h">单精度</text><rect class="seg sign" x="175" y="120" width="35" height="50"/><text class="s" x="192" y="145">S</text><rect class="seg exp" x="210" y="120" width="220" height="50"/><text class="h" x="320" y="145">E：8 位，bias=127</text><rect class="seg frac" x="430" y="120" width="515" height="50"/><text class="h" x="687" y="145">F：23 位</text>
+    <text x="95" y="225" class="h">双精度</text><rect class="seg sign" x="175" y="200" width="25" height="50"/><text class="s" x="187" y="225">S</text><rect class="seg exp" x="200" y="200" width="235" height="50"/><text class="h" x="317" y="225">E：11 位，bias=1023</text><rect class="seg frac" x="435" y="200" width="510" height="50"/><text class="h" x="690" y="225">F：52 位</text>
+  </g>
+  <text x="520" y="288" text-anchor="middle" class="s">规格化数的最高有效位恒为 1，因此作为“隐藏位”不存储；更多 F 位提高精度，更多 E 位扩大范围。</text>
+  <g text-anchor="middle"><rect x="75" y="325" width="170" height="80" rx="10" fill="#fff" stroke="#94a3b8"/><text x="160" y="356" class="h">E=0，F=0</text><text x="160" y="385" class="s">±0</text><rect x="255" y="325" width="180" height="80" rx="10" fill="#fff" stroke="#94a3b8"/><text x="345" y="356" class="h">E=0，F≠0</text><text x="345" y="385" class="s">非规格化数</text><rect x="445" y="325" width="190" height="80" rx="10" fill="#fff" stroke="#94a3b8"/><text x="540" y="356" class="h">0&lt;E&lt;全 1</text><text x="540" y="385" class="s">规格化有限数</text><rect x="645" y="325" width="140" height="80" rx="10" fill="#fff" stroke="#94a3b8"/><text x="715" y="356" class="h">E=全1</text><text x="715" y="385" class="s">F=0 → ±∞</text><rect x="795" y="325" width="170" height="80" rx="10" fill="#fff" stroke="#94a3b8"/><text x="880" y="356" class="h">E=全1</text><text x="880" y="385" class="s">F≠0 → NaN</text></g>
+</svg>

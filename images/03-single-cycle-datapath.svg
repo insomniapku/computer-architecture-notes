@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="650" viewBox="0 0 1250 650" role="img" aria-labelledby="title desc">
+  <title id="title">简化的 RISC-V 单周期数据通路</title>
+  <desc id="desc">从 PC 和指令存储器到寄存器堆、立即数生成、ALU、数据存储器和写回多路选择器，并含 PC+4 和分支目标选择。</desc>
+  <defs><style>
+    text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.t{font-size:28px;font-weight:700}.h{font-size:19px;font-weight:700}.s{font-size:15px}.c{font-size:14px;font-weight:700;fill:#9f1239}
+    .state{fill:#dbeafe;stroke:#2563eb;stroke-width:2}.comb{fill:#dcfce7;stroke:#16a34a;stroke-width:2}.mem{fill:#fef3c7;stroke:#d97706;stroke-width:2}.mux{fill:#f3e8ff;stroke:#7e22ce;stroke-width:2}.wire{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#a)}.branch{stroke:#dc2626;stroke-width:2;fill:none;marker-end:url(#r)}
+  </style><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker><marker id="r" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker></defs>
+  <rect width="1250" height="650" rx="18" fill="#f8fafc"/>
+  <text x="625" y="42" text-anchor="middle" class="t">简化的 RISC-V 单周期数据通路</text>
+  <rect class="state" x="45" y="270" width="90" height="90" rx="12"/><text x="90" y="323" text-anchor="middle" class="h">PC</text>
+  <rect class="mem" x="185" y="235" width="150" height="160" rx="12"/><text x="260" y="295" text-anchor="middle" class="h">指令存储器</text><text x="260" y="325" text-anchor="middle" class="s">Instruction</text><text x="260" y="350" text-anchor="middle" class="s">Memory</text>
+  <rect class="state" x="425" y="205" width="170" height="220" rx="12"/><text x="510" y="250" text-anchor="middle" class="h">寄存器堆</text><text x="446" y="292" class="s">rs1</text><text x="446" y="342" class="s">rs2</text><text x="535" y="390" class="s">rd 写回</text>
+  <rect class="comb" x="425" y="475" width="170" height="70" rx="12"/><text x="510" y="515" text-anchor="middle" class="h">ImmGen</text>
+  <path class="mux" d="M660 300 L700 320 L660 340 Z"/><text x="666" y="365" class="s">ALUSrc</text>
+  <rect class="comb" x="750" y="255" width="130" height="125" rx="45"/><text x="815" y="312" text-anchor="middle" class="h">ALU</text><text x="815" y="340" text-anchor="middle" class="s">运算/地址/比较</text>
+  <rect class="mem" x="950" y="235" width="150" height="160" rx="12"/><text x="1025" y="292" text-anchor="middle" class="h">数据存储器</text><text x="1025" y="325" text-anchor="middle" class="s">Data Memory</text><text x="1025" y="355" text-anchor="middle" class="c">MemRead / MemWrite</text>
+  <path class="mux" d="M1140 270 L1180 300 L1140 330 Z"/><text x="1156" y="355" class="s">MemtoReg</text>
+  <rect class="comb" x="180" y="80" width="120" height="65" rx="12"/><text x="240" y="119" text-anchor="middle" class="h">PC + 4</text>
+  <rect class="comb" x="720" y="80" width="170" height="65" rx="12"/><text x="805" y="108" text-anchor="middle" class="h">分支目标</text><text x="805" y="132" text-anchor="middle" class="s">PC + branch_imm</text>
+  <path class="mux" d="M65 120 L105 145 L65 170 Z"/><text x="65" y="104" class="c">PCSrc</text>
+  <path class="wire" d="M135 315 H180"/><path class="wire" d="M335 315 H420"/><text x="355" y="300" class="s">instruction</text>
+  <path class="wire" d="M595 275 H745"/><text x="620" y="262" class="s">ReadData1</text>
+  <path class="wire" d="M595 335 H655"/><path class="wire" d="M595 510 H635 V335 H655"/><path class="wire" d="M700 320 H745"/>
+  <path class="wire" d="M880 315 H945"/><text x="900" y="300" class="s">address/result</text><path class="wire" d="M595 365 H920 V365 H945"/><text x="730" y="390" class="s">Store data</text>
+  <path class="wire" d="M1100 285 H1135"/><path class="wire" d="M880 350 H1120 V315 H1135"/><path class="wire" d="M1180 300 V590 H385 V390 H420"/><text x="810" y="615" text-anchor="middle" class="c">RegWrite</text>
+  <path class="wire" d="M90 265 V112 H175"/><path class="wire" d="M300 112 H720"/><path class="wire" d="M805 145 V185 H110 V145 H105"/><path class="wire" d="M240 145 V165 H65"/><path class="wire" d="M65 145 H35 V315 H40"/>
+  <path class="branch" d="M880 285 C930 170 260 170 115 145"/><text x="615" y="177" text-anchor="middle" class="c">Branch &amp; compare result</text>
+  <text x="625" y="570" text-anchor="middle" class="s">一个周期内完成：取指 → 译码/读寄存器 → 执行 → 访存 → 写回；周期长度由最慢路径决定。</text>
+</svg>

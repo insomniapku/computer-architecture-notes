@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="760" viewBox="0 0 900 760" role="img" aria-labelledby="title desc">
+  <title id="title">计算机系统抽象层次</title>
+  <desc id="desc">从应用、算法、语言到操作系统、ISA、微体系结构，再到底层逻辑、电路、器件和工艺。</desc>
+  <defs>
+    <style>
+      text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}
+      .t{font-size:30px;font-weight:700}.l{font-size:22px;font-weight:600}.s{font-size:17px}
+      .box{stroke:#64748b;stroke-width:1.5}.soft{fill:#dbeafe}.arch{fill:#fde68a;stroke:#d97706;stroke-width:3}.hard{fill:#dcfce7}
+      .arrow{stroke:#475569;stroke-width:2;fill:none;marker-end:url(#a)}
+    </style>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker>
+  </defs>
+  <rect width="900" height="760" rx="18" fill="#f8fafc"/>
+  <text x="450" y="48" text-anchor="middle" class="t">计算机系统的抽象层次</text>
+  <text x="105" y="108" text-anchor="middle" class="l">软件关注“做什么”</text>
+  <text x="795" y="704" text-anchor="middle" class="l">硬件落实“怎么做”</text>
+  <g text-anchor="middle">
+    <rect class="box soft" x="260" y="76" width="380" height="48" rx="10"/><text class="l" x="450" y="108">应用 Application</text>
+    <rect class="box soft" x="260" y="132" width="380" height="48" rx="10"/><text class="l" x="450" y="164">算法 Algorithm</text>
+    <rect class="box soft" x="260" y="188" width="380" height="48" rx="10"/><text class="l" x="450" y="220">编程语言</text>
+    <rect class="box soft" x="260" y="244" width="380" height="48" rx="10"/><text class="l" x="450" y="276">操作系统</text>
+    <rect class="box arch" x="225" y="308" width="450" height="66" rx="12"/><text class="l" x="450" y="337">指令集体系结构 ISA</text><text class="s" x="450" y="362">软件—硬件的关键接口</text>
+    <rect class="box hard" x="260" y="390" width="380" height="48" rx="10"/><text class="l" x="450" y="422">微体系结构</text>
+    <rect class="box hard" x="260" y="446" width="380" height="48" rx="10"/><text class="l" x="450" y="478">寄存器传输级 RTL</text>
+    <rect class="box hard" x="260" y="502" width="380" height="48" rx="10"/><text class="l" x="450" y="534">门级逻辑</text>
+    <rect class="box hard" x="260" y="558" width="380" height="48" rx="10"/><text class="l" x="450" y="590">电路</text>
+    <rect class="box hard" x="260" y="614" width="380" height="48" rx="10"/><text class="l" x="450" y="646">器件</text>
+    <rect class="box hard" x="260" y="670" width="380" height="48" rx="10"/><text class="l" x="450" y="702">制造工艺</text>
+  </g>
+  <path class="arrow" d="M184 98 L184 692"/>
+  <text x="158" y="395" transform="rotate(-90 158 395)" text-anchor="middle" class="s">逐层翻译、抽象与实现</text>
+</svg>

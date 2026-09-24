@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="720" viewBox="0 0 1180 720" role="img" aria-labelledby="title desc">
+  <title id="title">数据转发与 Load-use 冒险</title>
+  <desc id="desc">普通 ALU 结果可从 EX/MEM 转发给下一条指令，而 Load 数据到 MEM 末尾才可用，因此紧随其后的使用者需要一个停顿周期。</desc>
+  <defs><style>
+    text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.t{font-size:28px;font-weight:700}.h{font-size:21px;font-weight:700}.s{font-size:14px}.code{font-size:16px;font-family:Consolas,"Microsoft YaHei",monospace}.c{font-size:13px;fill:#475569}
+    .if{fill:#dbeafe}.id{fill:#e9d5ff}.ex{fill:#dcfce7}.mem{fill:#fef3c7}.wb{fill:#fed7aa}.stall{fill:#fecaca;stroke:#dc2626;stroke-width:2}.cell{stroke:#64748b;stroke-width:1}.fwd{stroke:#16a34a;stroke-width:4;fill:none;marker-end:url(#g)}.late{stroke:#dc2626;stroke-width:4;fill:none;marker-end:url(#r)}
+  </style><marker id="g" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#16a34a"/></marker><marker id="r" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker></defs>
+  <rect width="1180" height="720" rx="18" fill="#f8fafc"/>
+  <text x="590" y="43" text-anchor="middle" class="t">转发能解决普通 RAW，但不能消除紧邻的 Load-use</text>
+  <g text-anchor="middle" class="c"><text x="360" y="85">周期1</text><text x="460" y="85">周期2</text><text x="560" y="85">周期3</text><text x="660" y="85">周期4</text><text x="760" y="85">周期5</text><text x="860" y="85">周期6</text><text x="960" y="85">周期7</text></g>
+  <text x="40" y="125" class="h">① ALU → ALU：直接转发</text>
+  <text x="60" y="170" class="code">add x1,x2,x3</text><text x="60" y="235" class="code">sub x4,x1,x5</text>
+  <g text-anchor="middle" class="s"><rect class="cell if" x="310" y="140" width="100" height="50"/><text x="360" y="170">IF</text><rect class="cell id" x="410" y="140" width="100" height="50"/><text x="460" y="170">ID</text><rect class="cell ex" x="510" y="140" width="100" height="50"/><text x="560" y="170">EX</text><rect class="cell mem" x="610" y="140" width="100" height="50"/><text x="660" y="170">MEM</text><rect class="cell wb" x="710" y="140" width="100" height="50"/><text x="760" y="170">WB</text>
+    <rect class="cell if" x="410" y="205" width="100" height="50"/><text x="460" y="235">IF</text><rect class="cell id" x="510" y="205" width="100" height="50"/><text x="560" y="235">ID</text><rect class="cell ex" x="610" y="205" width="100" height="50"/><text x="660" y="235">EX</text><rect class="cell mem" x="710" y="205" width="100" height="50"/><text x="760" y="235">MEM</text><rect class="cell wb" x="810" y="205" width="100" height="50"/><text x="860" y="235">WB</text></g>
+  <path class="fwd" d="M560 190 C560 280 660 280 660 257"/><text x="610" y="295" text-anchor="middle" class="s" fill="#15803d">EX/MEM 结果 → 下一条 EX 输入</text>
+  <line x1="35" y1="335" x2="1145" y2="335" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="40" y="380" class="h">② Load → 使用者：必须插入 1 个气泡</text>
+  <text x="60" y="425" class="code">ld  x1,0(x2)</text><text x="60" y="490" class="code">sub x4,x1,x5</text>
+  <g text-anchor="middle" class="s"><rect class="cell if" x="310" y="395" width="100" height="50"/><text x="360" y="425">IF</text><rect class="cell id" x="410" y="395" width="100" height="50"/><text x="460" y="425">ID</text><rect class="cell ex" x="510" y="395" width="100" height="50"/><text x="560" y="425">EX</text><rect class="cell mem" x="610" y="395" width="100" height="50"/><text x="660" y="425">MEM</text><rect class="cell wb" x="710" y="395" width="100" height="50"/><text x="760" y="425">WB</text>
+    <rect class="cell if" x="410" y="460" width="100" height="50"/><text x="460" y="490">IF</text><rect class="cell id" x="510" y="460" width="100" height="50"/><text x="560" y="490">ID</text><rect class="stall" x="610" y="460" width="100" height="50"/><text x="660" y="490">STALL</text><rect class="cell ex" x="710" y="460" width="100" height="50"/><text x="760" y="490">EX</text><rect class="cell mem" x="810" y="460" width="100" height="50"/><text x="860" y="490">MEM</text><rect class="cell wb" x="910" y="460" width="100" height="50"/><text x="960" y="490">WB</text></g>
+  <path class="late" d="M660 447 C660 545 760 545 760 512"/><text x="710" y="565" text-anchor="middle" class="s" fill="#b91c1c">数据到 MEM 末尾才出现；原本下一周期 EX 来不及</text>
+  <rect x="70" y="600" width="1040" height="82" rx="12" fill="#fff" stroke="#94a3b8"/><text x="590" y="629" text-anchor="middle" class="h">暂停硬件做两件事</text><text x="590" y="658" text-anchor="middle" class="s">冻结 PC 与 IF/ID，使前端不前进；把写入 ID/EX 的控制位清零，插入一个无操作气泡。</text>
+</svg>
