@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1070" viewBox="0 0 1440 1070" role="img" aria-labelledby="title desc">
+<title id="title">改进迭代乘法器：高半部加法与整体右移</title>
+<desc id="desc">n 位被乘数 M 与 Product 高半部 H 相加，和写回 H，进位保存在 C。低半部 L 的最低位控制是否相加。随后把 C、H、L 作为整体逻辑右移，C 进入 H 最高位，H 最低位进入 L 最高位，L 最低位丢弃。下方用 13 乘 11 的第二轮逐位展示 1:0011:1101 变为 0:1001:1110。</desc>
+<defs><style>text{font-family:Microsoft YaHei,Noto Sans CJK SC,sans-serif;fill:#172033}.title{font-size:31px;font-weight:700}.head{font-size:25px;font-weight:700}.body{font-size:23px}.small{font-size:20px;fill:#475569}.bit{font-family:Consolas,monospace;font-size:27px;font-weight:700}.box{stroke-width:2}.m{fill:#dcfce7;stroke:#16a34a}.h{fill:#dbeafe;stroke:#2563eb}.l{fill:#e9d5ff;stroke:#7e22ce}.c{fill:#ffedd5;stroke:#ea580c}.zero{fill:#f1f5f9;stroke:#64748b}.wire{fill:none;stroke:#475569;stroke-width:2.5;marker-end:url(#arrow)}.carry{stroke:#ea580c}.cross{stroke:#7e22ce}.control{stroke-dasharray:7 5}</style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
+<rect width="1440" height="1070" rx="18" fill="#f8fafc"/>
+<text x="720" y="48" text-anchor="middle" class="title">改进迭代乘法器：先加高半部，再整体右移</text>
+<text x="720" y="90" text-anchor="middle" class="body">无符号乘法；M 保持不变。Product 初始为 H = 0、L = 乘数，进位 C = 0。</text>
+<rect x="120" y="140" width="300" height="92" rx="8" class="box m"/>
+<text x="270" y="178" text-anchor="middle" class="head">被乘数 M（n 位）</text>
+<text x="270" y="211" text-anchor="middle" class="small">固定保存，不移位</text>
+<rect x="520" y="140" width="300" height="92" rx="8" class="box h"/>
+<text x="670" y="178" text-anchor="middle" class="head">当前高半部 H</text>
+<text x="670" y="211" text-anchor="middle" class="small">读取后参与本轮加法</text>
+<rect x="1000" y="140" width="320" height="92" rx="8" class="box l"/>
+<text x="1160" y="178" text-anchor="middle" class="head">检查 L[0]</text>
+<text x="1160" y="211" text-anchor="middle" class="small">1：相加；0：跳过</text>
+<path class="wire" d="M 270 232 V 265 H 500 V 300"/>
+<path class="wire" d="M 670 232 V 300"/>
+<rect x="430" y="300" width="400" height="88" rx="8" class="box m"/>
+<text x="630" y="336" text-anchor="middle" class="head">n 位加法器：H + M</text>
+<text x="630" y="372" text-anchor="middle" class="small">输出 n 位和及 1 位进位</text>
+<path class="wire control" d="M 1160 232 V 342 H 830"/>
+<text x="1010" y="326" text-anchor="middle" class="small">控制是否相加</text>
+<path class="wire carry" d="M 485 388 V 430 H 95 V 550 H 135"/>
+<path class="wire" d="M 720 388 V 510"/>
+<text x="275" y="455" text-anchor="middle" class="small">进位 → C</text>
+<text x="635" y="455" text-anchor="middle" class="small">和的低 n 位 → H</text>
+<text x="180" y="495" text-anchor="middle" class="head">C（1 位）</text>
+<text x="500" y="495" text-anchor="middle" class="head">高半部 H（n 位）</text>
+<text x="1020" y="495" text-anchor="middle" class="head">低半部 L（n 位）</text>
+<rect x="135" y="510" width="90" height="78" rx="8" class="box c"/>
+<text x="180" y="558" text-anchor="middle" class="bit">C</text>
+<rect x="225" y="510" width="535" height="78" rx="8" class="box h"/>
+<text x="492" y="558" text-anchor="middle" class="body">更新 H（或跳过加法）</text>
+<rect x="760" y="510" width="520" height="78" rx="8" class="box l"/>
+<text x="1020" y="558" text-anchor="middle" class="body">L 暂不改变</text>
+<path class="wire" d="M 708 588 V 630"/>
+<text x="1000" y="626" text-anchor="middle" class="body">随后 C:H:L 整体逻辑右移 1 位</text>
+<text x="720" y="667" text-anchor="middle" class="small">C 进入 H；H 的最低位进入 L；L[0] 被消费。重复 n 轮后，H:L 是乘积。</text>
+<line x1="65" y1="697" x2="1375" y2="697" stroke="#cbd5e1"/>
+<text x="720" y="735" text-anchor="middle" class="head">第二轮位流：6 + 13 = 19，进位必须参与移位</text>
+<text x="230" y="802" text-anchor="middle" class="head">右移前</text>
+<text x="230" y="931" text-anchor="middle" class="head">右移后</text>
+<rect x="440" y="768" width="52" height="58" rx="8" class="box c"/>
+<text x="466" y="806" text-anchor="middle" class="bit">1</text>
+<rect x="440" y="896" width="52" height="58" rx="8" class="box zero"/>
+<text x="466" y="934" text-anchor="middle" class="bit">0</text>
+<path class="wire carry" d="M 466 831 L 518 891"/>
+<rect x="492" y="768" width="52" height="58" rx="8" class="box h"/>
+<text x="518" y="806" text-anchor="middle" class="bit">0</text>
+<rect x="492" y="896" width="52" height="58" rx="8" class="box h"/>
+<text x="518" y="934" text-anchor="middle" class="bit">1</text>
+<path class="wire " d="M 518 831 L 570 891"/>
+<rect x="544" y="768" width="52" height="58" rx="8" class="box h"/>
+<text x="570" y="806" text-anchor="middle" class="bit">0</text>
+<rect x="544" y="896" width="52" height="58" rx="8" class="box h"/>
+<text x="570" y="934" text-anchor="middle" class="bit">0</text>
+<path class="wire " d="M 570 831 L 622 891"/>
+<rect x="596" y="768" width="52" height="58" rx="8" class="box h"/>
+<text x="622" y="806" text-anchor="middle" class="bit">1</text>
+<rect x="596" y="896" width="52" height="58" rx="8" class="box h"/>
+<text x="622" y="934" text-anchor="middle" class="bit">0</text>
+<path class="wire " d="M 622 831 L 674 891"/>
+<rect x="648" y="768" width="52" height="58" rx="8" class="box h"/>
+<text x="674" y="806" text-anchor="middle" class="bit">1</text>
+<rect x="648" y="896" width="52" height="58" rx="8" class="box h"/>
+<text x="674" y="934" text-anchor="middle" class="bit">1</text>
+<path class="wire cross" d="M 674 831 L 726 891"/>
+<rect x="700" y="768" width="52" height="58" rx="8" class="box l"/>
+<text x="726" y="806" text-anchor="middle" class="bit">1</text>
+<rect x="700" y="896" width="52" height="58" rx="8" class="box l"/>
+<text x="726" y="934" text-anchor="middle" class="bit">1</text>
+<path class="wire " d="M 726 831 L 778 891"/>
+<rect x="752" y="768" width="52" height="58" rx="8" class="box l"/>
+<text x="778" y="806" text-anchor="middle" class="bit">1</text>
+<rect x="752" y="896" width="52" height="58" rx="8" class="box l"/>
+<text x="778" y="934" text-anchor="middle" class="bit">1</text>
+<path class="wire " d="M 778 831 L 830 891"/>
+<rect x="804" y="768" width="52" height="58" rx="8" class="box l"/>
+<text x="830" y="806" text-anchor="middle" class="bit">0</text>
+<rect x="804" y="896" width="52" height="58" rx="8" class="box l"/>
+<text x="830" y="934" text-anchor="middle" class="bit">1</text>
+<path class="wire " d="M 830 831 L 882 891"/>
+<rect x="856" y="768" width="52" height="58" rx="8" class="box l"/>
+<text x="882" y="806" text-anchor="middle" class="bit">1</text>
+<rect x="856" y="896" width="52" height="58" rx="8" class="box l"/>
+<text x="882" y="934" text-anchor="middle" class="bit">0</text>
+<path class="wire" d="M 338 854 L 466 891"/>
+<text x="297" y="851" text-anchor="middle" class="small">补 0</text>
+<path class="wire" d="M 882 831 L 993 878"/>
+<text x="1080" y="868" text-anchor="middle" class="small">原 L[0] = 1 移出</text>
+<text x="1080" y="898" text-anchor="middle" class="small">这一乘数位已处理</text>
+<text x="496" y="987" text-anchor="middle" class="small">橙色箭头：C → H 最高位</text>
+<text x="908" y="987" text-anchor="middle" class="small">紫色箭头：H[0] → L 最高位</text>
+<text x="720" y="1034" text-anchor="middle" class="body">1:0011:1101 → 0:1001:1110；最终第 4 轮得到 H:L = 1000:1111 = 143。</text>
+</svg>
