@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="670" viewBox="0 0 1180 670" role="img" aria-labelledby="title desc">
+<title id="title">软件流水线：重叠不同迭代</title><desc id="desc">每次迭代在启动后两周期做Add、五周期做Store。每周期启动新迭代，稳态同时有Load、Add和Store。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="670" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">软件流水线：重叠不同迭代</text>
+<text x="216.5" y="135" class="body" text-anchor="middle">1</text>
+<text x="289.5" y="135" class="body" text-anchor="middle">2</text>
+<text x="362.5" y="135" class="body" text-anchor="middle">3</text>
+<text x="435.5" y="135" class="body" text-anchor="middle">4</text>
+<text x="508.5" y="135" class="body" text-anchor="middle">5</text>
+<text x="581.5" y="135" class="body" text-anchor="middle">6</text>
+<text x="654.5" y="135" class="body" text-anchor="middle">7</text>
+<text x="727.5" y="135" class="body" text-anchor="middle">8</text>
+<text x="800.5" y="135" class="body" text-anchor="middle">9</text>
+<text x="873.5" y="135" class="body" text-anchor="middle">10</text>
+<text x="946.5" y="135" class="body" text-anchor="middle">11</text>
+<text x="1019.5" y="135" class="body" text-anchor="middle">12</text>
+<text x="55" y="135" class="small" text-anchor="start">迭代 / 周期</text>
+<rect x="180" y="150" width="365" height="6" rx="8" fill="#dbeafe" stroke="#dbeafe" stroke-width="1.5"/>
+<rect x="545" y="150" width="73" height="6" rx="8" fill="#dcfce7" stroke="#dcfce7" stroke-width="1.5"/>
+<rect x="618" y="150" width="438" height="6" rx="8" fill="#fef3c7" stroke="#fef3c7" stroke-width="1.5"/>
+<text x="55" y="198" class="body" text-anchor="start">迭代 0</text>
+<rect x="180" y="165" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="253" y="165" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="326" y="165" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="399" y="165" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="472" y="165" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="545" y="165" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="618" y="165" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="691" y="165" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="764" y="165" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="837" y="165" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="910" y="165" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="983" y="165" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="182" y="167" width="69" height="49" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="216.5" y="197" class="small" text-anchor="middle">Load</text>
+<rect x="328" y="167" width="69" height="49" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="362.5" y="197" class="small" text-anchor="middle">Add</text>
+<rect x="547" y="167" width="69" height="49" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="581.5" y="197" class="small" text-anchor="middle">Store</text>
+<text x="55" y="256" class="body" text-anchor="start">迭代 1</text>
+<rect x="180" y="223" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="253" y="223" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="326" y="223" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="399" y="223" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="472" y="223" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="545" y="223" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="618" y="223" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="691" y="223" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="764" y="223" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="837" y="223" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="910" y="223" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="983" y="223" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="255" y="225" width="69" height="49" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="289.5" y="255" class="small" text-anchor="middle">Load</text>
+<rect x="401" y="225" width="69" height="49" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="435.5" y="255" class="small" text-anchor="middle">Add</text>
+<rect x="620" y="225" width="69" height="49" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="654.5" y="255" class="small" text-anchor="middle">Store</text>
+<text x="55" y="314" class="body" text-anchor="start">迭代 2</text>
+<rect x="180" y="281" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="253" y="281" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="326" y="281" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="399" y="281" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="472" y="281" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="545" y="281" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="618" y="281" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="691" y="281" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="764" y="281" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="837" y="281" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="910" y="281" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="983" y="281" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="328" y="283" width="69" height="49" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="362.5" y="313" class="small" text-anchor="middle">Load</text>
+<rect x="474" y="283" width="69" height="49" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="508.5" y="313" class="small" text-anchor="middle">Add</text>
+<rect x="693" y="283" width="69" height="49" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="727.5" y="313" class="small" text-anchor="middle">Store</text>
+<text x="55" y="372" class="body" text-anchor="start">迭代 3</text>
+<rect x="180" y="339" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="253" y="339" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="326" y="339" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="399" y="339" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="472" y="339" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="545" y="339" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="618" y="339" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="691" y="339" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="764" y="339" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="837" y="339" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="910" y="339" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="983" y="339" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="401" y="341" width="69" height="49" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="435.5" y="371" class="small" text-anchor="middle">Load</text>
+<rect x="547" y="341" width="69" height="49" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="581.5" y="371" class="small" text-anchor="middle">Add</text>
+<rect x="766" y="341" width="69" height="49" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="800.5" y="371" class="small" text-anchor="middle">Store</text>
+<text x="55" y="430" class="body" text-anchor="start">迭代 4</text>
+<rect x="180" y="397" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="253" y="397" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="326" y="397" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="399" y="397" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="472" y="397" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="545" y="397" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="618" y="397" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="691" y="397" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="764" y="397" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="837" y="397" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="910" y="397" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="983" y="397" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="474" y="399" width="69" height="49" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="508.5" y="429" class="small" text-anchor="middle">Load</text>
+<rect x="620" y="399" width="69" height="49" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="654.5" y="429" class="small" text-anchor="middle">Add</text>
+<rect x="839" y="399" width="69" height="49" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="873.5" y="429" class="small" text-anchor="middle">Store</text>
+<text x="55" y="488" class="body" text-anchor="start">迭代 5</text>
+<rect x="180" y="455" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="253" y="455" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="326" y="455" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="399" y="455" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="472" y="455" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="545" y="455" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="618" y="455" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="691" y="455" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="764" y="455" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="837" y="455" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="910" y="455" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="983" y="455" width="73" height="53" fill="white" stroke="#cbd5e1"/>
+<rect x="547" y="457" width="69" height="49" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="581.5" y="487" class="small" text-anchor="middle">Load</text>
+<rect x="693" y="457" width="69" height="49" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="727.5" y="487" class="small" text-anchor="middle">Add</text>
+<rect x="912" y="457" width="69" height="49" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="946.5" y="487" class="small" text-anchor="middle">Store</text>
+<text x="365" y="565" class="head" text-anchor="middle">Prolog：填充</text>
+<text x="582" y="565" class="head" text-anchor="middle">Kernel</text>
+<text x="837" y="565" class="head" text-anchor="middle">Epilog：排空</text>
+<text x="40" y="613" class="small" text-anchor="start">图示假设：Load → Add 延迟 2 周期，Add → Store 延迟 3 周期，各类单元可每周期启动。</text>
+<text x="40" y="646" class="small" text-anchor="start">第 6 周期同时做迭代 0 的 Store、迭代 3 的 Add、迭代 5 的 Load；必须保证寄存器版本正确。</text>
+</svg>

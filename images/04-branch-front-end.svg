@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="690" viewBox="0 0 1180 690" role="img" aria-labelledby="title desc">
+<title id="title">取指前端：方向与目标预测</title><desc id="desc">当前PC并行查询方向表、目标缓冲和返回地址栈，选择下一PC；实际结果更新预测并触发必要的恢复。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="690" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">取指前端：方向与目标预测</text>
+<rect x="40" y="245" width="120" height="85" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="100" y="296" class="head" text-anchor="middle">当前 PC</text>
+<rect x="260" y="105" width="280" height="95" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="400" y="142" class="head" text-anchor="middle">BHT / 方向表</text>
+<text x="400" y="177" class="body" text-anchor="middle">输出 T 或 NT</text>
+<path d="M160,287 L200,287 L200,152 L260,152" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="260" y="245" width="280" height="95" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="400" y="282" class="head" text-anchor="middle">BTB / 目标缓冲</text>
+<text x="400" y="317" class="body" text-anchor="middle">索引 + 标签匹配</text>
+<path d="M160,287 L200,287 L200,292 L260,292" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="260" y="385" width="280" height="95" rx="8" fill="#e9d5ff" stroke="#64748b" stroke-width="1.5"/>
+<text x="400" y="422" class="head" text-anchor="middle">RAS / 返回地址栈</text>
+<text x="400" y="457" class="body" text-anchor="middle">调用压栈，返回弹栈</text>
+<path d="M160,287 L200,287 L200,432 L260,432" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="690" y="210" width="230" height="210" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="805" y="251" class="head" text-anchor="middle">下一 PC 选择</text>
+<text x="805" y="294" class="body" text-anchor="middle">返回：RAS 目标</text>
+<text x="805" y="331" class="body" text-anchor="middle">预测 T：BTB 目标</text>
+<text x="805" y="369" class="body" text-anchor="middle">预测 NT：PC + 4</text>
+<path d="M920,315 L1010,315" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="1010" y="275" width="130" height="80" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="1075" y="323" class="head" text-anchor="middle">下一 PC</text>
+<path d="M540,152 L610,152 L610,315 L690,315" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M540,292 L610,292 L610,315 L690,315" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M540,432 L610,432 L610,315 L690,315" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="260" y="540" width="660" height="70" rx="8" fill="#fee2e2" stroke="#64748b" stroke-width="1.5"/>
+<text x="590" y="583" class="small" text-anchor="middle">实际方向 / 目标：更新预测器，错误时重定向并取消年轻指令</text>
+<text x="40" y="656" class="small" text-anchor="start">图中顺序地址按 32 位指令写为 PC + 4；缺失、返回识别和目标选择依具体实现处理。</text>
+</svg>

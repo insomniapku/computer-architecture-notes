@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="520" viewBox="0 0 1180 520" role="img" aria-labelledby="title desc">
+<title id="title">两位饱和计数器</title><desc id="desc">四个状态为SN、WN、WT、ST。实际T使状态饱和加一，实际NT使状态饱和减一。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="520" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">两位饱和计数器</text>
+<rect x="75" y="130" width="470" height="255" rx="8" fill="#fee2e2" stroke="#fecaca" stroke-width="1.5"/>
+<rect x="585" y="130" width="470" height="255" rx="8" fill="#dcfce7" stroke="#bbf7d0" stroke-width="1.5"/>
+<circle cx="180" cy="250" r="62" fill="white" stroke="#475569" stroke-width="2"/>
+<text x="180" y="240" class="head" text-anchor="middle">00</text>
+<text x="180" y="274" class="head" text-anchor="middle">SN</text>
+<text x="180" y="353" class="body" text-anchor="middle">强不跳转</text>
+<circle cx="430" cy="250" r="62" fill="white" stroke="#475569" stroke-width="2"/>
+<text x="430" y="240" class="head" text-anchor="middle">01</text>
+<text x="430" y="274" class="head" text-anchor="middle">WN</text>
+<text x="430" y="353" class="body" text-anchor="middle">弱不跳转</text>
+<circle cx="700" cy="250" r="62" fill="white" stroke="#475569" stroke-width="2"/>
+<text x="700" y="240" class="head" text-anchor="middle">10</text>
+<text x="700" y="274" class="head" text-anchor="middle">WT</text>
+<text x="700" y="353" class="body" text-anchor="middle">弱跳转</text>
+<circle cx="950" cy="250" r="62" fill="white" stroke="#475569" stroke-width="2"/>
+<text x="950" y="240" class="head" text-anchor="middle">11</text>
+<text x="950" y="274" class="head" text-anchor="middle">ST</text>
+<text x="950" y="353" class="body" text-anchor="middle">强跳转</text>
+<path d="M225,205 L385,205" fill="none" stroke="#15803d" stroke-width="2.5" marker-end="url(#green)"/>
+<text x="305.0" y="190" class="body" text-anchor="middle" style="fill:#15803d">T</text>
+<path d="M385,295 L225,295" fill="none" stroke="#b91c1c" stroke-width="2.5" marker-end="url(#red)"/>
+<text x="305.0" y="323" class="body" text-anchor="middle" style="fill:#b91c1c">NT</text>
+<path d="M475,205 L655,205" fill="none" stroke="#15803d" stroke-width="2.5" marker-end="url(#green)"/>
+<text x="565.0" y="190" class="body" text-anchor="middle" style="fill:#15803d">T</text>
+<path d="M655,295 L475,295" fill="none" stroke="#b91c1c" stroke-width="2.5" marker-end="url(#red)"/>
+<text x="565.0" y="323" class="body" text-anchor="middle" style="fill:#b91c1c">NT</text>
+<path d="M745,205 L905,205" fill="none" stroke="#15803d" stroke-width="2.5" marker-end="url(#green)"/>
+<text x="825.0" y="190" class="body" text-anchor="middle" style="fill:#15803d">T</text>
+<path d="M905,295 L745,295" fill="none" stroke="#b91c1c" stroke-width="2.5" marker-end="url(#red)"/>
+<text x="825.0" y="323" class="body" text-anchor="middle" style="fill:#b91c1c">NT</text>
+<path d="M130,214 C65,145 65,350 130,286" fill="none" stroke="#b91c1c" stroke-width="2.5" marker-end="url(#red)"/>
+<text x="72" y="258" class="small" text-anchor="middle" style="fill:#b91c1c">NT</text>
+<path d="M1000,286 C1085,350 1085,145 1000,214" fill="none" stroke="#15803d" stroke-width="2.5" marker-end="url(#green)"/>
+<text x="1083" y="258" class="small" text-anchor="middle" style="fill:#15803d">T</text>
+<text x="310" y="414" class="head" text-anchor="middle">预测 NT（最高位 0）</text>
+<text x="820" y="414" class="head" text-anchor="middle">预测 T（最高位 1）</text>
+<text x="40" y="477" class="body" text-anchor="start">强状态遇到一次反常只变弱；弱状态遇到相反结果就改变预测方向。</text>
+</svg>

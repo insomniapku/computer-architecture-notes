@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="720" viewBox="0 0 1180 720" role="img" aria-labelledby="title desc">
+<title id="title">超标量处理器：乱序执行与顺序提交</title><desc id="desc">取指经译码重命名到指令窗口，选择就绪指令并行执行，写回结果供转发，ROB按程序顺序提交。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="720" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">超标量处理器：乱序执行与顺序提交</text>
+<rect x="40" y="125" width="235" height="90" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="157.5" y="178" class="head" text-anchor="middle">取指 / 分支预测</text>
+<rect x="315" y="125" width="235" height="90" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="432.5" y="178" class="head" text-anchor="middle">译码 / 重命名</text>
+<rect x="590" y="125" width="250" height="90" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="715.0" y="178" class="head" text-anchor="middle">指令窗口 / 保留站</text>
+<path d="M275,170 L315,170" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M550,170 L590,170" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="710" y="250" class="body" text-anchor="middle">等待操作数与资源</text>
+<path d="M715,215 L715,300" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="595" y="300" width="240" height="65" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="715" y="342" class="head" text-anchor="middle">选择就绪指令</text>
+<rect x="70" y="410" width="200" height="65" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="170.0" y="452" class="head" text-anchor="middle">整数单元 1</text>
+<path d="M715,365 L715,385 L170.0,385 L170.0,410" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M170.0,475 L170.0,505 L590,505 L590,535" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="305" y="410" width="200" height="65" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="405.0" y="452" class="head" text-anchor="middle">整数单元 2</text>
+<path d="M715,365 L715,385 L405.0,385 L405.0,410" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M405.0,475 L405.0,505 L590,505 L590,535" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="540" y="410" width="200" height="65" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="640.0" y="452" class="head" text-anchor="middle">浮点单元</text>
+<path d="M715,365 L715,385 L640.0,385 L640.0,410" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M640.0,475 L640.0,505 L590,505 L590,535" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="775" y="410" width="230" height="65" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="890.0" y="452" class="head" text-anchor="middle">Load / Store</text>
+<path d="M715,365 L715,385 L890.0,385 L890.0,410" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M890.0,475 L890.0,505 L590,505 L590,535" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="385" y="535" width="410" height="65" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="590" y="577" class="head" text-anchor="middle">写回结果 / 物理寄存器 / ROB</text>
+<path d="M590,600 L590,635" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="385" y="635" width="410" height="55" rx="8" fill="#e9d5ff" stroke="#64748b" stroke-width="1.5"/>
+<text x="590" y="671" class="body" text-anchor="middle">按程序顺序提交，维持精确异常</text>
+<path d="M795,568 L1080,568 L1080,170 L840,170" fill="none" stroke="#15803d" stroke-width="3" marker-end="url(#green)"/>
+<text x="1100" y="360" class="body" text-anchor="middle" style="fill:#15803d">转发</text>
+<text x="1100" y="390" class="body" text-anchor="middle" style="fill:#15803d">唤醒</text>
+</svg>

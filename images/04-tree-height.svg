@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="580" viewBox="0 0 1180 580" role="img" aria-labelledby="title desc">
+<title id="title">树高缩减：缩短真正的依赖链</title><desc id="desc">串行的三次加法有三层依赖，平衡形式的前两次加法可以并行，最终加法在第二层。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="580" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">树高缩减：缩短真正的依赖链</text>
+<text x="275" y="110" class="code" text-anchor="middle">((R2 + R3) + R4) + R5</text>
+<text x="870" y="110" class="code" text-anchor="middle">(R2 + R3) + (R4 + R5)</text>
+<rect x="110" y="165" width="330" height="70" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="275" y="209" class="code" text-anchor="middle">R6 = R2 + R3</text>
+<rect x="110" y="280" width="330" height="70" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="275" y="324" class="code" text-anchor="middle">R7 = R6 + R4</text>
+<rect x="110" y="395" width="330" height="70" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="275" y="439" class="code" text-anchor="middle">R8 = R7 + R5</text>
+<path d="M275,235 L275,280" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M275,350 L275,395" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="610" y="165" width="245" height="70" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="732" y="209" class="code" text-anchor="middle">R6 = R2 + R3</text>
+<rect x="895" y="165" width="245" height="70" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="1017" y="209" class="code" text-anchor="middle">R7 = R4 + R5</text>
+<rect x="705" y="330" width="340" height="70" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="875" y="374" class="code" text-anchor="middle">R8 = R6 + R7</text>
+<path d="M732,235 L815,330" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M1017,235 L935,330" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="275" y="515" class="head" text-anchor="middle">关键路径：3 层</text>
+<text x="875" y="515" class="head" text-anchor="middle">关键路径：2 层</text>
+<text x="40" y="557" class="small" text-anchor="start">操作仍是 3 次；并行资源和合法结合律是前提，浮点重排可能改变结果。</text>
+</svg>

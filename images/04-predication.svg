@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="650" viewBox="0 0 1180 650" role="img" aria-labelledby="title desc">
+<title id="title">谓词执行：把路径选择变成条件写入</title><desc id="desc">左侧根据条件选择B或C；右侧按p和非p控制写入，两种操作可能都占用流水线资源。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="650" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">谓词执行：把路径选择变成条件写入</text>
+<text x="290" y="110" class="head" text-anchor="middle">分支控制流</text>
+<text x="875" y="110" class="head" text-anchor="middle">谓词形式</text>
+<rect x="175" y="145" width="230" height="65" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="290" y="187" class="head" text-anchor="middle">A：计算 cond</text>
+<rect x="60" y="300" width="205" height="80" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="162" y="345" class="head" text-anchor="middle">B：b = 0</text>
+<rect x="310" y="300" width="205" height="80" rx="8" fill="#fee2e2" stroke="#64748b" stroke-width="1.5"/>
+<text x="412" y="345" class="head" text-anchor="middle">C：b = 1</text>
+<rect x="175" y="470" width="230" height="65" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="290" y="512" class="head" text-anchor="middle">D：后续代码</text>
+<path d="M260,210 L165,300" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="150" y="253" class="body" text-anchor="start">真</text>
+<path d="M325,210 L415,300" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="410" y="253" class="body" text-anchor="start">假</text>
+<path d="M165,380 L260,470" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M415,380 L325,470" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="710" y="145" width="330" height="65" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="875" y="187" class="code" text-anchor="middle">p = cond</text>
+<path d="M875,210 L875,260" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="710" y="260" width="330" height="80" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="875" y="307" class="code" text-anchor="middle">(p)  mov b, 0</text>
+<path d="M875,340 L875,380" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="710" y="380" width="330" height="80" rx="8" fill="#fee2e2" stroke="#64748b" stroke-width="1.5"/>
+<text x="875" y="427" class="code" text-anchor="middle">(!p) mov b, 1</text>
+<path d="M875,460 L875,500" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="710" y="500" width="330" height="65" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="875" y="542" class="head" text-anchor="middle">D：后续代码</text>
+<text x="40" y="615" class="small" text-anchor="start">收益取决于省下的分支错误成本是否超过额外工作；假谓词的异常和副作用须符合 ISA 语义。</text>
+</svg>
