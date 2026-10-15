@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="750" viewBox="0 0 1180 750" role="img" aria-labelledby="title desc">
+<title id="title">ROB 模型：推测版本与正式状态</title><desc id="desc">RAT指向最新推测版本，RS按源就绪调度，结果先写ROB，队头正常完成后才提交ARF。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="750" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">ROB 模型：推测版本与正式状态</text>
+<rect x="40" y="135" width="200" height="85" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="140.0" y="187" class="head" text-anchor="middle">按序分配</text>
+<rect x="285" y="135" width="220" height="85" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="395.0" y="187" class="head" text-anchor="middle">RAT 重命名</text>
+<rect x="550" y="135" width="235" height="85" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="667.5" y="187" class="head" text-anchor="middle">RS 等待 / 调度</text>
+<rect x="830" y="135" width="290" height="85" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="975.0" y="187" class="head" text-anchor="middle">FU 乱序执行</text>
+<path d="M240,177 L285,177" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M505,177 L550,177" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M785,177 L830,177" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="840" y="300" width="280" height="65" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="980" y="342" class="head" text-anchor="middle">广播标签和值</text>
+<path d="M980,220 L980,300" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M980,365 L980,410 L582,410 L582,445" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="70" y="402" class="head" text-anchor="start">ROB 按程序顺序保存临时结果和完成状态</text>
+<rect x="80" y="445" width="185" height="95" rx="8" fill="#fee2e2" stroke="#64748b" stroke-width="1.5"/>
+<text x="172" y="481" class="head" text-anchor="middle">最老项</text>
+<text x="172" y="520" class="body" text-anchor="middle">Fin=0</text>
+<rect x="285" y="445" width="185" height="95" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="377" y="481" class="head" text-anchor="middle">年轻项</text>
+<text x="377" y="520" class="body" text-anchor="middle">Fin=1</text>
+<rect x="490" y="445" width="185" height="95" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="582" y="481" class="head" text-anchor="middle">年轻项</text>
+<text x="582" y="520" class="body" text-anchor="middle">Fin=1</text>
+<rect x="695" y="445" width="185" height="95" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="787" y="481" class="head" text-anchor="middle">年轻项</text>
+<text x="787" y="520" class="body" text-anchor="middle">Fin=0</text>
+<rect x="900" y="445" width="185" height="95" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+<text x="992" y="481" class="head" text-anchor="middle">下一空项</text>
+<text x="992" y="520" class="body" text-anchor="middle">待分配</text>
+<text x="172" y="580" class="code" text-anchor="middle">head</text>
+<text x="992" y="580" class="code" text-anchor="middle">tail</text>
+<rect x="325" y="635" width="530" height="65" rx="8" fill="#e9d5ff" stroke="#64748b" stroke-width="1.5"/>
+<text x="590" y="678" class="body" text-anchor="middle">ARF：只有顺序提交才能更新正式寄存器</text>
+<path d="M172,540 L172,667 L325,667" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="40" y="730" class="small" text-anchor="start">此时队头未结束，后面 Fin=1 的项也不能越过它退休。</text>
+</svg>

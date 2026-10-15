@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="650" viewBox="0 0 1180 650" role="img" aria-labelledby="title desc">
+<title id="title">推测数据流如何留下缓存痕迹</title><desc id="desc">错误路径的秘密值选择探针地址，探针访问改变缓存。寄存器结果取消后，访问时间仍可能透露所选位置。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="650" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">推测数据流如何留下缓存痕迹</text>
+<rect x="40" y="205" width="205" height="125" rx="8" fill="#fee2e2" stroke="#64748b" stroke-width="1.5"/>
+<text x="142.5" y="249" class="head" text-anchor="middle">瞬态秘密值</text>
+<text x="142.5" y="297" class="small" text-anchor="middle">q = 75</text>
+<rect x="315" y="205" width="245" height="125" rx="8" fill="#e9d5ff" stroke="#64748b" stroke-width="1.5"/>
+<text x="437.5" y="249" class="head" text-anchor="middle">依赖地址计算</text>
+<text x="437.5" y="297" class="small" text-anchor="middle">probe[q × stride]</text>
+<rect x="630" y="205" width="240" height="125" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="750.0" y="249" class="head" text-anchor="middle">缓存状态改变</text>
+<text x="750.0" y="297" class="small" text-anchor="middle">第 q 个探针位置</text>
+<rect x="940" y="205" width="205" height="125" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="1042.5" y="249" class="head" text-anchor="middle">测量访问时间</text>
+<text x="1042.5" y="297" class="small" text-anchor="middle">推断所选位置</text>
+<path d="M245,268 L315,268" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M560,268 L630,268" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M870,268 L940,268" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="105" y="445" width="450" height="95" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="330" y="484" class="head" text-anchor="middle">架构状态</text>
+<text x="330" y="520" class="small" text-anchor="middle">错误路径不提交寄存器 / 正式存储结果</text>
+<rect x="625" y="445" width="450" height="95" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="850" y="484" class="head" text-anchor="middle">微体系结构状态</text>
+<text x="850" y="520" class="small" text-anchor="middle">缓存访问留下的时间差可能仍可观察</text>
+<text x="40" y="610" class="small" text-anchor="start">泄漏的区分信号来自依赖秘密的探针访问；“不退休”本身不能保证没有侧信道。</text>
+</svg>

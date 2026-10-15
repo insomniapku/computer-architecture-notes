@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="680" viewBox="0 0 1180 680" role="img" aria-labelledby="title desc">
+<title id="title">分支判错：取消指令之外，还要恢复映射</title><desc id="desc">分支前保存RAT，错误路径覆盖映射。取消错误项后从分支检查点恢复，并处理资源和已经提交的旧映射。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="680" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">分支判错：取消指令之外，还要恢复映射</text>
+<rect x="50" y="150" width="400" height="170" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="250" y="192" class="head" text-anchor="middle">分支处正确 RAT</text>
+<text x="250" y="242" class="body" text-anchor="middle">R1 → 正确老版本</text>
+<text x="250" y="284" class="body" text-anchor="middle">R2 → 正确老版本</text>
+<rect x="730" y="150" width="400" height="170" rx="8" fill="#fee2e2" stroke="#64748b" stroke-width="1.5"/>
+<text x="930" y="192" class="head" text-anchor="middle">错误路径后的 RAT</text>
+<text x="930" y="242" class="body" text-anchor="middle">R1 → 错误年轻 ROB</text>
+<text x="930" y="284" class="body" text-anchor="middle">R2 → 错误年轻 ROB</text>
+<path d="M450,235 L730,235" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="590" y="202" class="body" text-anchor="middle">预测后继续重命名</text>
+<rect x="55" y="440" width="490" height="105" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="300" y="478" class="head" text-anchor="middle">方案 A：Stall and Drain</text>
+<text x="300" y="518" class="small" text-anchor="middle">取消错路径，正确前缀排空后 RAT 回 ARF</text>
+<rect x="635" y="440" width="490" height="105" rx="8" fill="#e9d5ff" stroke="#64748b" stroke-width="1.5"/>
+<text x="880" y="478" class="head" text-anchor="middle">方案 B：Checkpoint</text>
+<text x="880" y="518" class="small" text-anchor="middle">恢复分支处的版本和相关资源状态</text>
+<path d="M930,320 L930,390 L300,390 L300,440" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M880,390 L880,440" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="40" y="603" class="body" text-anchor="start">只清 ROB 而不恢复 RAT，会让正确路径引用已无效的年轻项。</text>
+<text x="40" y="648" class="small" text-anchor="start">检查点还须维护有效旧映射；物理寄存器实现要配套恢复分配 / 回收状态。</text>
+</svg>

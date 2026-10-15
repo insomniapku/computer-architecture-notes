@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="790" viewBox="0 0 1180 790" role="img" aria-labelledby="title desc">
+<title id="title">ROB 例题：真依赖跟随值版本</title><desc id="desc">I1产生9，I2产生12，I3产生3，I4计算36，I5计算33，I6计算42；同写R1的三个版本相互独立。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="790" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">ROB 例题：真依赖跟随值版本</text>
+<rect x="50" y="135" width="300" height="95" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="200.0" y="173" class="head" text-anchor="middle">I1 / ROB1：DIV</text>
+<text x="200.0" y="211" class="body" text-anchor="middle">45 ÷ 5 = 9</text>
+<rect x="440" y="135" width="300" height="95" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="590.0" y="173" class="head" text-anchor="middle">I2 / ROB2：MUL1</text>
+<text x="590.0" y="211" class="body" text-anchor="middle">3 × 4 = 12</text>
+<rect x="830" y="135" width="300" height="95" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="980.0" y="173" class="head" text-anchor="middle">I3 / ROB3：ADD1</text>
+<text x="980.0" y="211" class="body" text-anchor="middle">1 + 2 = 3</text>
+<rect x="440" y="325" width="300" height="95" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="590.0" y="363" class="head" text-anchor="middle">I4 / ROB4：MUL2</text>
+<text x="590.0" y="401" class="body" text-anchor="middle">12 × 3 = 36</text>
+<rect x="440" y="490" width="300" height="95" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="590.0" y="528" class="head" text-anchor="middle">I5 / ROB5：SUB</text>
+<text x="590.0" y="566" class="body" text-anchor="middle">36 − 3 = 33</text>
+<rect x="440" y="650" width="300" height="95" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="590.0" y="688" class="head" text-anchor="middle">I6 / ROB6：ADD2</text>
+<text x="590.0" y="726" class="body" text-anchor="middle">33 + 9 = 42</text>
+<path d="M590,230 L590,325" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M980,230 L980,372 L740,372" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M590,420 L590,490" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M590,585 L590,650" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M200,230 L200,697 L440,697" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="840" y="523" class="body" text-anchor="start">R1 的三个版本：</text>
+<text x="840" y="562" class="code" text-anchor="start">ROB2 → ROB4 → ROB6</text>
+<text x="840" y="612" class="head" text-anchor="start">最终 R4 必须是 33</text>
+</svg>

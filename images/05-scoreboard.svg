@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+<title id="title">Scoreboard：三张表控制四个阶段</title><desc id="desc">发射检查结构和WAW，读源等待RAW，执行后写回检查WAR。指令表、功能单元表和寄存器结果表集中跟踪。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="760" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">Scoreboard：三张表控制四个阶段</text>
+<rect x="40" y="150" width="285" height="105" rx="8" fill="#e9d5ff" stroke="#64748b" stroke-width="1.5"/>
+<text x="182" y="192" class="head" text-anchor="middle">指令状态表</text>
+<text x="182" y="230" class="body" text-anchor="middle">各阶段发生周期</text>
+<rect x="40" y="310" width="285" height="105" rx="8" fill="#e9d5ff" stroke="#64748b" stroke-width="1.5"/>
+<text x="182" y="352" class="head" text-anchor="middle">功能单元状态表</text>
+<text x="182" y="390" class="body" text-anchor="middle">Busy / Op / 源 / 目的</text>
+<rect x="40" y="470" width="285" height="105" rx="8" fill="#e9d5ff" stroke="#64748b" stroke-width="1.5"/>
+<text x="182" y="512" class="head" text-anchor="middle">寄存器结果表</text>
+<text x="182" y="550" class="body" text-anchor="middle">哪个 FU 负责写</text>
+<rect x="465" y="125" width="655" height="100" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="792" y="163" class="head" text-anchor="middle">1. Issue / ID1</text>
+<text x="792" y="203" class="body" text-anchor="middle">按序分配：FU 空闲，无 WAW</text>
+<path d="M792,225 L792,275" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="465" y="275" width="655" height="100" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="792" y="313" class="head" text-anchor="middle">2. Read / ID2</text>
+<text x="792" y="353" class="body" text-anchor="middle">源都就绪：解除 RAW，读取后 R 位清零</text>
+<path d="M792,375 L792,425" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="465" y="425" width="655" height="100" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="792" y="463" class="head" text-anchor="middle">3. Execute</text>
+<text x="792" y="503" class="body" text-anchor="middle">按功能单元延迟计算</text>
+<path d="M792,525 L792,575" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="465" y="575" width="655" height="100" rx="8" fill="#fee2e2" stroke="#64748b" stroke-width="1.5"/>
+<text x="792" y="613" class="head" text-anchor="middle">4. Write Result</text>
+<text x="792" y="653" class="body" text-anchor="middle">没有老指令仍等读旧值：解除 WAR</text>
+<path d="M325,365 L465,365" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="40" y="724" class="small" text-anchor="start">Q 表示等待哪个生产者；R=1 表示源已就绪且尚未读取。算完与允许写回是不同条件。</text>
+</svg>

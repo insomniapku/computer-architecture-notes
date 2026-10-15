@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="660" viewBox="0 0 1180 660" role="img" aria-labelledby="title desc">
+<title id="title">LSQ 转发：选择最年轻的更老 Store</title><desc id="desc">Load41777选择Store41775的负17，不能选择比自己年轻的Store41779；Load41781选择Store41779的0。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="660" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">LSQ 转发：选择最年轻的更老 Store</text>
+<text x="40" y="110" class="body" text-anchor="start">同一数据地址 0x3290；顺序从上到下由老到新，初始 Cache 值为 42。</text>
+<rect x="150" y="165" width="770" height="70" rx="8" fill="#e9d5ff" stroke="#64748b" stroke-width="1.5"/>
+<text x="190" y="209" class="head" text-anchor="start">S 41775</text>
+<text x="650" y="209" class="head" text-anchor="start">写 −17</text>
+<rect x="150" y="260" width="770" height="70" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="190" y="304" class="head" text-anchor="start">L 41777</text>
+<text x="650" y="304" class="head" text-anchor="start">读 −17</text>
+<rect x="150" y="355" width="770" height="70" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="190" y="399" class="head" text-anchor="start">S 41779</text>
+<text x="650" y="399" class="head" text-anchor="start">写 0</text>
+<rect x="150" y="450" width="770" height="70" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="190" y="494" class="head" text-anchor="start">L 41781</text>
+<text x="650" y="494" class="head" text-anchor="start">读 0</text>
+<path d="M920,200 L1000,200 L1000,295 L920,295" fill="none" stroke="#15803d" stroke-width="3" marker-end="url(#green)"/>
+<path d="M920,390 L1000,390 L1000,485 L920,485" fill="none" stroke="#15803d" stroke-width="3" marker-end="url(#green)"/>
+<text x="1040" y="255" class="body" text-anchor="middle">转发</text>
+<text x="1040" y="445" class="body" text-anchor="middle">转发</text>
+<text x="40" y="584" class="body" text-anchor="start">保守策略：更老 Store 地址未知就等；最近匹配者的数据未知也要等。</text>
+<text x="40" y="628" class="small" text-anchor="start">不能绕过最近匹配者取 Cache 旧值；不同宽度还需检查字节覆盖。</text>
+</svg>

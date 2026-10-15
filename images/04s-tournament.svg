@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="640" viewBox="0 0 1180 640" role="img" aria-labelledby="title desc">
+<title id="title">竞赛预测：选择更适合的预测器</title><desc id="desc">局部和全局预测器并行给出方向，Meta计数器选择；只有一对一错时才向正确者调整偏好。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="640" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">竞赛预测：选择更适合的预测器</text>
+<rect x="50" y="240" width="130" height="70" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="115" y="283" class="body" text-anchor="middle">PC / 历史</text>
+<rect x="280" y="130" width="290" height="90" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="425" y="168" class="head" text-anchor="middle">Pred0：局部 / 简单</text>
+<text x="425" y="202" class="body" text-anchor="middle">方向预测 0</text>
+<rect x="280" y="360" width="290" height="90" rx="8" fill="#e9d5ff" stroke="#64748b" stroke-width="1.5"/>
+<text x="425" y="398" class="head" text-anchor="middle">Pred1：全局 / 相关</text>
+<text x="425" y="432" class="body" text-anchor="middle">方向预测 1</text>
+<path d="M180,275 L225,275 L225,175 L280,175" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M225,275 L225,405 L280,405" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="710" y="210" width="260" height="140" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="840" y="248" class="head" text-anchor="middle">Meta 选择器</text>
+<text x="840" y="287" class="body" text-anchor="middle">最高位 0：Pred0</text>
+<text x="840" y="323" class="body" text-anchor="middle">最高位 1：Pred1</text>
+<path d="M570,175 L640,175 L640,245 L710,245" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M570,405 L640,405 L640,320 L710,320" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M970,280 L1080,280" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="1075" y="250" class="body" text-anchor="middle">最终方向</text>
+<rect x="240" y="515" width="750" height="65" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="615" y="555" class="body" text-anchor="middle">0 错 1 对：加一；0 对 1 错：减一；同对 / 同错：不变</text>
+</svg>

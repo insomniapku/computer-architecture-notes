@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="620" viewBox="0 0 1180 620" role="img" aria-labelledby="title desc">
+<title id="title">历史模式选择预测计数器</title><desc id="desc">历史寄存器保存过去结果，按历史选择不同两位计数器。交替模式下，上次NT后预测T，上次T后预测NT。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="620" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">历史模式选择预测计数器</text>
+<rect x="40" y="195" width="210" height="95" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="145" y="233" class="head" text-anchor="middle">分支 PC</text>
+<text x="145" y="268" class="small" text-anchor="middle">索引局部历史表</text>
+<path d="M250,242 L325,242" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="325" y="195" width="280" height="95" rx="8" fill="#e9d5ff" stroke="#64748b" stroke-width="1.5"/>
+<text x="465" y="233" class="head" text-anchor="middle">历史寄存器 h</text>
+<text x="465" y="268" class="body" text-anchor="middle">1 位：上次结果 0/1</text>
+<rect x="730" y="145" width="340" height="75" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="900" y="190" class="body" text-anchor="middle">h=0：C[0]=11，预测 T</text>
+<rect x="730" y="285" width="340" height="75" rx="8" fill="#fee2e2" stroke="#64748b" stroke-width="1.5"/>
+<text x="900" y="330" class="body" text-anchor="middle">h=1：C[1]=00，预测 NT</text>
+<path d="M605,242 L665,242 L665,182 L730,182" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M665,242 L665,322 L730,322" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="900" y="113" class="head" text-anchor="middle">PHT：不同上下文，各自训练</text>
+<rect x="185" y="440" width="825" height="80" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="597" y="475" class="body" text-anchor="middle">实际结果返回：更新原先选中的计数器，再移入历史</text>
+<text x="597" y="507" class="body" text-anchor="middle">上次 0 → 预测 1；上次 1 → 预测 0，训练后可识别交替</text>
+<text x="40" y="580" class="small" text-anchor="start">更长历史有更多上下文：k 位最多 2^k 种；PHT 保存状态，历史寄存器保存结果序列。</text>
+</svg>
