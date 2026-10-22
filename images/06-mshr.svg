@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+<title id="title">MSHR：一个未完成块可有多个等待者</title><desc id="desc">请求命中直接返回；同块未完成请求合并；新块分配MSHR并访问下一级；返回后唤醒等待者。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="760" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">MSHR：一个未完成块可有多个等待者</text>
+<rect x="40" y="115" width="265" height="150" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="60" y="153" class="head" text-anchor="start">CPU 访存请求</text>
+<text x="60" y="192" class="body" text-anchor="start">块地址 + 块内偏移</text>
+<text x="60" y="226" class="body" text-anchor="start">Load / Store 信息</text>
+<path d="M305,190 L375,190" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="375" y="115" width="340" height="150" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="395" y="153" class="head" text-anchor="start">Cache / MSHR 查询</text>
+<text x="395" y="192" class="body" text-anchor="start">Cache hit：返回数据</text>
+<text x="395" y="226" class="body" text-anchor="start">未完成的同块：尝试合并</text>
+<path d="M715,190 L825,190" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="825" y="115" width="310" height="150" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="845" y="153" class="head" text-anchor="start">下一级</text>
+<text x="845" y="192" class="body" text-anchor="start">新块：分配项后请求</text>
+<text x="845" y="226" class="body" text-anchor="start">数据返回 → 回填</text>
+<rect x="200" y="350" width="780" height="210" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="230" y="390" class="head" text-anchor="start">MSHR 文件（示例）</text>
+<text x="230" y="432" class="code" text-anchor="start">有效 | 块 X | Load r5@0、Load r8@8 | 等待数据</text>
+<text x="230" y="478" class="code" text-anchor="start">有效 | 块 Y | Store@16               | 等待数据</text>
+<text x="230" y="524" class="code" text-anchor="start">空闲 | ...</text>
+<path d="M545,265 L545,350" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M980,265 L980,350" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="40" y="625" class="body" text-anchor="start">同块请求可合并；不同块请求使用不同项，实现 Miss under Miss。</text>
+<text x="40" y="663" class="body" text-anchor="start">Cache 中已有的块可继续命中，实现 Hit under Miss。</text>
+<text x="40" y="701" class="body" text-anchor="start">并行度仍受 MSHR 数量、端口、Bank、队列和带宽限制。</text>
+</svg>

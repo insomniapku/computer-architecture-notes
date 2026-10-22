@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="720" viewBox="0 0 1180 720" role="img" aria-labelledby="title desc">
+<title id="title">同为 4 行：改变的是“允许放置的位置”</title><desc id="desc">直接映射只有一个候选；两路组相联有两个；全相联有四个。0和4的冲突因此得到不同处理。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="720" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">同为 4 行：改变的是“允许放置的位置”</text>
+<text x="210" y="125" class="head" text-anchor="middle">直接映射：4 组 × 1 路</text>
+<rect x="100" y="175" width="240" height="60" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="220" y="214" class="body" text-anchor="middle">字 0 ↔ 字 4</text>
+<rect x="100" y="255" width="240" height="60" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="220" y="294" class="body" text-anchor="middle">未利用</text>
+<rect x="100" y="335" width="240" height="60" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+<text x="220" y="374" class="body" text-anchor="middle">未利用</text>
+<rect x="100" y="415" width="240" height="60" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+<text x="220" y="454" class="body" text-anchor="middle">未利用</text>
+<text x="220" y="537" class="body" text-anchor="middle">每次相互替换</text>
+<text x="590" y="125" class="head" text-anchor="middle">两路组相联：2 组 × 2 路</text>
+<rect x="480" y="175" width="240" height="60" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="600" y="214" class="body" text-anchor="middle">字 0</text>
+<rect x="480" y="255" width="240" height="60" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="600" y="294" class="body" text-anchor="middle">字 4</text>
+<rect x="480" y="335" width="240" height="60" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+<text x="600" y="374" class="body" text-anchor="middle">空</text>
+<rect x="480" y="415" width="240" height="60" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+<text x="600" y="454" class="body" text-anchor="middle">空</text>
+<text x="460" y="243" class="small" text-anchor="end">组0</text>
+<text x="460" y="403" class="small" text-anchor="end">组1</text>
+<text x="600" y="537" class="body" text-anchor="middle">组 0 的两路并存</text>
+<text x="970" y="125" class="head" text-anchor="middle">全相联：1 组 × 4 路</text>
+<rect x="860" y="175" width="240" height="60" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="980" y="214" class="body" text-anchor="middle">字 0</text>
+<rect x="860" y="255" width="240" height="60" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="980" y="294" class="body" text-anchor="middle">字 4</text>
+<rect x="860" y="335" width="240" height="60" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+<text x="980" y="374" class="body" text-anchor="middle">空</text>
+<rect x="860" y="415" width="240" height="60" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+<text x="980" y="454" class="body" text-anchor="middle">空</text>
+<text x="980" y="537" class="body" text-anchor="middle">同一组内任意行</text>
+<rect x="50" y="566" width="330" height="70" rx="8" fill="#fee2e2" stroke="#64748b" stroke-width="1.5"/>
+<text x="215" y="610" class="body" text-anchor="middle">8 次访问 → 8 次 miss</text>
+<rect x="430" y="566" width="330" height="70" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="595" y="610" class="body" text-anchor="middle">8 次访问 → 2 次 miss</text>
+<rect x="810" y="566" width="330" height="70" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="975" y="610" class="body" text-anchor="middle">8 次访问 → 2 次 miss</text>
+<text x="40" y="680" class="small" text-anchor="start">例子：一字一块，序列 0,4,0,4,0,4,0,4；数字是字编号，不是字节地址。</text>
+</svg>

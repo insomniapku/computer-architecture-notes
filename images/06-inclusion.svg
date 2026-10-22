@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="690" viewBox="0 0 1180 690" role="img" aria-labelledby="title desc">
+<title id="title">多级 Cache 的包含关系约束的是块集合</title><desc id="desc">包含式上层是下层子集；互斥式不重叠；非包含非互斥可部分重叠。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="690" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">多级 Cache 的包含关系约束的是块集合</text>
+<text x="210" y="125" class="head" text-anchor="middle">Inclusive 包含式</text>
+<rect x="50" y="175" width="330" height="80" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="215" y="225" class="body" text-anchor="middle">上层：A、B</text>
+<rect x="50" y="335" width="330" height="80" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="215" y="385" class="body" text-anchor="middle">下层：A、B、C、D</text>
+<path d="M215,255 L215,335" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="215" y="465" class="body" text-anchor="middle">Upper ⊆ Lower</text>
+<text x="215" y="500" class="body" text-anchor="middle">下层驱逐可触发上层失效</text>
+<text x="590" y="125" class="head" text-anchor="middle">Exclusive 互斥式</text>
+<rect x="430" y="175" width="330" height="80" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="595" y="225" class="body" text-anchor="middle">上层：A、B</text>
+<rect x="430" y="335" width="330" height="80" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="595" y="385" class="body" text-anchor="middle">下层：C、D、E、F</text>
+<path d="M595,255 L595,335" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="595" y="465" class="body" text-anchor="middle">Upper ∩ Lower = ∅</text>
+<text x="595" y="500" class="body" text-anchor="middle">上下层之间迁移块</text>
+<text x="970" y="125" class="head" text-anchor="middle">Non-inclusive</text>
+<rect x="810" y="175" width="330" height="80" rx="8" fill="#e9d5ff" stroke="#64748b" stroke-width="1.5"/>
+<text x="975" y="225" class="body" text-anchor="middle">上层：A、B</text>
+<rect x="810" y="335" width="330" height="80" rx="8" fill="#e9d5ff" stroke="#64748b" stroke-width="1.5"/>
+<text x="975" y="385" class="body" text-anchor="middle">下层：B、C、D、E</text>
+<path d="M975,255 L975,335" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="975" y="465" class="body" text-anchor="middle">无固定包含 / 互斥保证</text>
+<text x="975" y="500" class="body" text-anchor="middle">允许部分重叠</text>
+<text x="40" y="590" class="body" text-anchor="start">包含式不要求两层字节值时刻相等：上层 Dirty 数据可能更新。</text>
+<text x="40" y="626" class="body" text-anchor="start">驱逐 / 反向失效时，必须保护尚未向下传播的新值。</text>
+</svg>

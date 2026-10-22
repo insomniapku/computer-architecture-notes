@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="750" viewBox="0 0 1180 750" role="img" aria-labelledby="title desc">
+<title id="title">存储层次：容量、延迟与传输粒度</title><desc id="desc">寄存器、L1、L2/LLC、DRAM和存储设备依次连接；Cache搬运整块，TLB缓存地址翻译。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="750" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">存储层次：容量、延迟与传输粒度</text>
+<rect x="455.0" y="110" width="270" height="85" rx="8" fill="#e9d5ff" stroke="#64748b" stroke-width="1.5"/>
+<text x="590" y="143" class="head" text-anchor="middle">寄存器文件</text>
+<text x="590" y="175" class="small" text-anchor="middle">操作数：常见 4～8 B</text>
+<path d="M590,195 L590,215" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="365.0" y="215" width="450" height="85" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="590" y="248" class="head" text-anchor="middle">L1I / L1D：SRAM</text>
+<text x="590" y="280" class="small" text-anchor="middle">按指令 / 数据分别缓存</text>
+<path d="M590,300 L590,320" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="275.0" y="320" width="630" height="85" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="590" y="353" class="head" text-anchor="middle">L2 / LLC：更大 Cache</text>
+<text x="590" y="385" class="small" text-anchor="middle">层间以 Cache block 搬运</text>
+<path d="M590,405 L590,425" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="185.0" y="425" width="810" height="85" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="590" y="458" class="head" text-anchor="middle">主存：DRAM</text>
+<text x="590" y="490" class="small" text-anchor="middle">多个 Cache 块位于同一 DRAM 行</text>
+<path d="M590,510 L590,530" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="95.0" y="530" width="990" height="85" rx="8" fill="#fee2e2" stroke="#64748b" stroke-width="1.5"/>
+<text x="590" y="563" class="head" text-anchor="middle">二级存储：SSD / 磁盘</text>
+<text x="590" y="595" class="small" text-anchor="middle">设备块、文件系统块与虚拟页分别定义</text>
+<text x="45" y="160" class="head" text-anchor="start">快</text>
+<text x="45" y="200" class="head" text-anchor="start">小</text>
+<text x="45" y="240" class="head" text-anchor="start">贵</text>
+<text x="1090" y="435" class="head" text-anchor="middle">慢</text>
+<text x="1090" y="475" class="head" text-anchor="middle">大</text>
+<text x="1090" y="515" class="head" text-anchor="middle">便宜</text>
+<text x="40" y="665" class="body" text-anchor="start">TLB 保存 VA → PA 的翻译；不是额外存放数据块的一层。</text>
+<text x="40" y="699" class="body" text-anchor="start">Cache block ≠ DRAM 行；磁盘扇区 ≠ 虚拟内存页。</text>
+</svg>

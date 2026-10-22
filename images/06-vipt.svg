@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+<title id="title">VIPT：虚拟地址索引与 TLB 并行</title><desc id="desc">32KiB八路64B块时，Index与Offset共12位，位于4KiB页内；物理Tag到达后完成比较。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="760" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">VIPT：虚拟地址索引与 TLB 并行</text>
+<rect x="390" y="110" width="400" height="70" rx="8" fill="#e9d5ff" stroke="#64748b" stroke-width="1.5"/>
+<text x="590" y="154" class="head" text-anchor="middle">虚拟地址 VA</text>
+<rect x="65" y="270" width="405" height="165" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="85" y="308" class="head" text-anchor="start">TLB：VA → PA</text>
+<text x="85" y="347" class="body" text-anchor="start">页号翻译 + 权限信息</text>
+<text x="85" y="381" class="body" text-anchor="start">得到 Physical Tag</text>
+<rect x="710" y="270" width="405" height="165" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="730" y="308" class="head" text-anchor="start">Cache SRAM</text>
+<text x="730" y="347" class="body" text-anchor="start">VA 页内 Index 选择组</text>
+<text x="730" y="381" class="body" text-anchor="start">读取各路 Tag / Data</text>
+<path d="M490,180 L270,270" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M690,180 L910,270" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="360" y="500" width="460" height="70" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="590" y="544" class="head" text-anchor="middle">比较物理 Tag，选择命中路</text>
+<path d="M270,435 L430,500" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M910,435 L750,500" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="40" y="625" class="body" text-anchor="start">32 KiB / 8 路 / 64 B：64 组，Index 6 位 + Offset 6 位 = 12 位。</text>
+<text x="40" y="663" class="body" text-anchor="start">简单无别名条件：C / W ≤ 页大小；4 KiB 页内偏移为 12 位。</text>
+<text x="40" y="701" class="body" text-anchor="start">超出条件需额外别名管理；ASID 不能独自解决两个 VA 映射同一 PA。</text>
+</svg>

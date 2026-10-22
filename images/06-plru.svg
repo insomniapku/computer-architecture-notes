@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="740" viewBox="0 0 1180 740" role="img" aria-labelledby="title desc">
+<title id="title">四路 Tree-PLRU：指针指向相对较旧的一侧</title><desc id="desc">四个叶子为A至D，三个内部位指向较旧子树。按A、B、C、D访问后，000选择A。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="740" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">四路 Tree-PLRU：指针指向相对较旧的一侧</text>
+<rect x="270" y="118" width="180" height="64" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="360" y="158" class="body" text-anchor="middle">L0：AB / CD</text>
+<rect x="110" y="258" width="180" height="64" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="200" y="298" class="body" text-anchor="middle">L1：A / B</text>
+<rect x="430" y="258" width="180" height="64" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="520" y="298" class="body" text-anchor="middle">L2：C / D</text>
+<path d="M330,182 L220,258" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M390,182 L500,258" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M170,322 L95,430" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M230,322 L270,430" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M490,322 L445,430" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M550,322 L620,430" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="50" y="430" width="90" height="65" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="95" y="472" class="head" text-anchor="middle">A</text>
+<rect x="225" y="430" width="90" height="65" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="270" y="472" class="head" text-anchor="middle">B</text>
+<rect x="400" y="430" width="90" height="65" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="445" y="472" class="head" text-anchor="middle">C</text>
+<rect x="575" y="430" width="90" height="65" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="620" y="472" class="head" text-anchor="middle">D</text>
+<rect x="750" y="135" width="380" height="365" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="770" y="173" class="head" text-anchor="start">位序：L0 L1 L2</text>
+<text x="770" y="212" class="body" text-anchor="start">初始      000</text>
+<text x="770" y="246" class="body" text-anchor="start">访问 A    110</text>
+<text x="770" y="280" class="body" text-anchor="start">访问 B    100</text>
+<text x="770" y="314" class="body" text-anchor="start">访问 C    001</text>
+<text x="770" y="348" class="body" text-anchor="start">访问 D    000</text>
+<text x="770" y="382" class="body" text-anchor="start">替换：根向左，再向左 → A</text>
+<text x="40" y="560" class="body" text-anchor="start">0：左侧较旧；1：右侧较旧。命中后，路径位都指向未访问的另一侧。</text>
+<text x="40" y="606" class="body" text-anchor="start">W 路用 W−1 个状态位；一次更新 / 选 Victim 经过 log₂ W 层。</text>
+<text x="40" y="652" class="body" text-anchor="start">再访问 A 后：PLRU 为 110，选 C；精确 LRU 应选 B。</text>
+</svg>

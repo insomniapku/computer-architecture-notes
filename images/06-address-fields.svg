@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="720" viewBox="0 0 1180 720" role="img" aria-labelledby="title desc">
+<title id="title">Cache 地址字段：先算组数，再拆位</title><desc id="desc">字节地址分为Tag、组索引、块内偏移；列出三种4KiB容量32位地址例子。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="720" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">Cache 地址字段：先算组数，再拆位</text>
+<text x="40" y="111" class="code" text-anchor="start">N = C / B       S = C / (B × W)</text>
+<text x="40" y="151" class="code" text-anchor="start">块号 q = floor(A / B)；组号 = q mod S；Tag = floor(q / S)</text>
+<rect x="60" y="188" width="500" height="90" rx="8" fill="#e9d5ff" stroke="#64748b" stroke-width="1.5"/>
+<text x="310.0" y="224" class="body" text-anchor="middle">Tag：区分同组的不同块</text>
+<text x="310.0" y="258" class="body" text-anchor="middle">n − s − b 位</text>
+<rect x="560" y="188" width="320" height="90" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="720.0" y="224" class="body" text-anchor="middle">Index：选择组</text>
+<text x="720.0" y="258" class="body" text-anchor="middle">s = log₂ S 位</text>
+<rect x="880" y="188" width="240" height="90" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="1000.0" y="224" class="body" text-anchor="middle">Offset：块内位置</text>
+<text x="1000.0" y="258" class="body" text-anchor="middle">b = log₂ B 位</text>
+<text x="60" y="328" class="head" text-anchor="start">4 KiB / DM / 4 B 块</text>
+<text x="60" y="368" class="code" text-anchor="start">Tag [31:12] 20 位 | Index [11:2] 10 位 | Byte [1:0] 2 位</text>
+<text x="60" y="428" class="head" text-anchor="start">4 KiB / DM / 16 B 块</text>
+<text x="60" y="468" class="code" text-anchor="start">Tag [31:12] 20 位 | Index [11:4] 8 位 | Word [3:2] + Byte [1:0]</text>
+<text x="60" y="528" class="head" text-anchor="start">4 KiB / 4 路 / 4 B 块</text>
+<text x="60" y="568" class="code" text-anchor="start">Tag [31:10] 22 位 | Index [9:2] 8 位 | Byte [1:0] 2 位</text>
+<text x="40" y="650" class="small" text-anchor="start">C 是数据容量，B 是每块字节数，W 是相联度；此处均为 2 的幂、低位选组。</text>
+</svg>

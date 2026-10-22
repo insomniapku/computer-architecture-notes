@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="610" viewBox="0 0 1180 610" role="img" aria-labelledby="title desc">
+<title id="title">Early Restart 与 Critical Word First</title><desc id="desc">32B块有四个8B字，CPU需要字2。常规顺序第三个字才能恢复，关键字优先在首字返回时恢复。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="610" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">Early Restart 与 Critical Word First</text>
+<text x="40" y="125" class="head" text-anchor="start">常规传输 + Early Restart</text>
+<rect x="80" y="155" width="205" height="75" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="182" y="201" class="head" text-anchor="middle">字 0</text>
+<path d="M285,192 L340,192" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="340" y="155" width="205" height="75" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="442" y="201" class="head" text-anchor="middle">字 1</text>
+<path d="M545,192 L600,192" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="600" y="155" width="205" height="75" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="702" y="201" class="head" text-anchor="middle">字 2</text>
+<path d="M805,192 L860,192" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M702,230 L702,265" fill="none" stroke="#15803d" stroke-width="2.5" marker-end="url(#green)"/>
+<text x="702" y="295" class="body" text-anchor="middle" style="fill:#15803d">CPU 恢复</text>
+<rect x="860" y="155" width="205" height="75" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="962" y="201" class="head" text-anchor="middle">字 3</text>
+<text x="40" y="305" class="head" text-anchor="start">Critical Word First + Early Restart</text>
+<rect x="80" y="335" width="205" height="75" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="182" y="381" class="head" text-anchor="middle">字 2</text>
+<path d="M285,372 L340,372" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M182,410 L182,445" fill="none" stroke="#15803d" stroke-width="2.5" marker-end="url(#green)"/>
+<text x="182" y="475" class="body" text-anchor="middle" style="fill:#15803d">CPU 恢复</text>
+<rect x="340" y="335" width="205" height="75" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="442" y="381" class="head" text-anchor="middle">字 3</text>
+<path d="M545,372 L600,372" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="600" y="335" width="205" height="75" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="702" y="381" class="head" text-anchor="middle">字 0</text>
+<path d="M805,372 L860,372" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="860" y="335" width="205" height="75" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="962" y="381" class="head" text-anchor="middle">字 1</text>
+<text x="40" y="565" class="small" text-anchor="start">提前恢复可缩短关键请求的等待；整块仍需继续传输，后续访问也可能等待。</text>
+</svg>

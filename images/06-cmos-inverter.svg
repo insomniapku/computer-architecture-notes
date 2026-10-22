@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="650" viewBox="0 0 1180 650" role="img" aria-labelledby="title desc">
+<title id="title">CMOS 反相器：PMOS 上拉，NMOS 下拉</title><desc id="desc">两个晶体管共用输入栅极，PMOS接电源，NMOS接地，公共漏极为输出。输入与输出取反。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="650" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">CMOS 反相器：PMOS 上拉，NMOS 下拉</text>
+<g fill="none" stroke="#172033" stroke-width="4">
+<path d="M550,105 H730 M640,105 V160 H670 V245 H640 V300 H970 M640,300 V355 H670 V440 H640 V490"/>
+<path d="M610,170 V235 M610,365 V430 M250,300 H470 V202 H570 M470,300 V398 H610"/>
+<circle cx="590" cy="202" r="18" fill="#f8fafc"/>
+<path d="M595,490 H685 M610,505 H670 M625,520 H655"/>
+</g>
+<circle cx="640" cy="300" r="6" fill="#172033"/>
+<circle cx="470" cy="300" r="6" fill="#172033"/>
+<text x="640" y="88" class="head" text-anchor="middle">VDD</text>
+<text x="190" y="309" class="head" text-anchor="start">Vin</text>
+<text x="990" y="309" class="head" text-anchor="start">Vout</text>
+<text x="720" y="210" class="body" text-anchor="start">PMOS：输入低时导通</text>
+<text x="720" y="405" class="body" text-anchor="start">NMOS：输入高时导通</text>
+<rect x="60" y="120" width="325" height="100" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="80" y="157" class="small" text-anchor="start">输入 0：上拉导通，下拉截止</text>
+<text x="80" y="193" class="head" text-anchor="start">输出 1</text>
+<rect x="60" y="390" width="325" height="100" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="80" y="427" class="small" text-anchor="start">输入 1：上拉截止，下拉导通</text>
+<text x="80" y="463" class="head" text-anchor="start">输出 0</text>
+<text x="40" y="595" class="small" text-anchor="start">两个反相器交叉反馈形成稳定状态；再加两个访问晶体管，构成典型 6T SRAM 单元。</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="720" viewBox="0 0 1180 720" role="img" aria-labelledby="title desc">
+<title id="title">写策略有两个独立维度</title><desc id="desc">写命中决定向下传播时机；写缺失决定是否在当前层分配。缓冲隐藏等待但会满。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="720" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">写策略有两个独立维度</text>
+<rect x="40" y="105" width="520" height="205" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="60" y="143" class="head" text-anchor="start">写命中：Write-through</text>
+<text x="60" y="182" class="body" text-anchor="start">CPU → 更新 Cache + 写入 Write Buffer</text>
+<text x="60" y="216" class="body" text-anchor="start">缓冲后台 → 下一级</text>
+<text x="60" y="250" class="body" text-anchor="start">缓冲满或读写冲突时，仍可能等待</text>
+<rect x="620" y="105" width="520" height="205" rx="8" fill="#e9d5ff" stroke="#64748b" stroke-width="1.5"/>
+<text x="640" y="143" class="head" text-anchor="start">写命中：Write-back</text>
+<text x="640" y="182" class="body" text-anchor="start">CPU → 更新 Cache，置 Dirty</text>
+<text x="640" y="216" class="body" text-anchor="start">驱逐 / 清理 / 协议要求时 → 向下写回</text>
+<text x="640" y="250" class="body" text-anchor="start">Dirty 与 Valid 的含义不同</text>
+<rect x="40" y="360" width="520" height="205" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="60" y="398" class="head" text-anchor="start">写缺失：Write Allocate</text>
+<text x="60" y="437" class="body" text-anchor="start">选位置，必要时处理脏 Victim</text>
+<text x="60" y="471" class="body" text-anchor="start">通常先取回块，保留未写字节</text>
+<text x="60" y="505" class="body" text-anchor="start">修改目标部分；常与 WB 搭配</text>
+<rect x="620" y="360" width="520" height="205" rx="8" fill="#fef3c7" stroke="#64748b" stroke-width="1.5"/>
+<text x="640" y="398" class="head" text-anchor="start">写缺失：No-write Allocate</text>
+<text x="640" y="437" class="body" text-anchor="start">不把块装入当前层</text>
+<text x="640" y="471" class="body" text-anchor="start">向下一级发送写请求</text>
+<text x="640" y="505" class="body" text-anchor="start">常与 WT 搭配</text>
+<text x="40" y="630" class="body" text-anchor="start">下一级可以是 L2 / LLC，不一定每次都访问 DRAM。</text>
+<text x="40" y="666" class="body" text-anchor="start">整行覆盖写可有优化；普通部分写必须保留同块其他字节。</text>
+</svg>

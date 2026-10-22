@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="630" viewBox="0 0 1180 630" role="img" aria-labelledby="title desc">
+<title id="title">Trace Cache：按动态路径聚合基本块</title><desc id="desc">普通指令块按地址保存；Trace Cache可聚合动态路径A到C到F的非连续基本块。</desc>
+<defs><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.head{font-size:24px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.code{font-family:Consolas,"Microsoft YaHei",monospace;font-size:21px}</style>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+<marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#15803d"/></marker>
+<marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b91c1c"/></marker></defs>
+<rect width="1180" height="630" fill="#f8fafc"/>
+<text x="40" y="55" class="title" text-anchor="start">Trace Cache：按动态路径聚合基本块</text>
+<text x="40" y="115" class="head" text-anchor="start">普通 I-Cache：按连续地址块组织</text>
+<rect x="60" y="155" width="140" height="80" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="130" y="204" class="head" text-anchor="middle">A</text>
+<rect x="240" y="155" width="140" height="80" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="310" y="204" class="head" text-anchor="middle">B</text>
+<rect x="420" y="155" width="140" height="80" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="490" y="204" class="head" text-anchor="middle">C</text>
+<rect x="600" y="155" width="140" height="80" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="670" y="204" class="head" text-anchor="middle">D</text>
+<rect x="780" y="155" width="140" height="80" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="850" y="204" class="head" text-anchor="middle">E</text>
+<rect x="960" y="155" width="140" height="80" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
+<text x="1030" y="204" class="head" text-anchor="middle">F</text>
+<text x="40" y="305" class="head" text-anchor="start">某次动态路径：A → C → F（中间跨过分支）</text>
+<rect x="170" y="350" width="260" height="90" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="300" y="404" class="head" text-anchor="middle">A 的 uops</text>
+<path d="M430,395 L470,395" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="470" y="350" width="260" height="90" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="600" y="404" class="head" text-anchor="middle">C 的 uops</text>
+<path d="M730,395 L770,395" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="770" y="350" width="260" height="90" rx="8" fill="#dcfce7" stroke="#64748b" stroke-width="1.5"/>
+<text x="900" y="404" class="head" text-anchor="middle">F 的 uops</text>
+<text x="40" y="510" class="body" text-anchor="start">Trace Cache 保存路径和指令 / 已译码微操作，按动态顺序供应。</text>
+<text x="40" y="548" class="body" text-anchor="start">仍需预测与验证分支；不同 trace 可能重复保存同一基本块。</text>
+</svg>
