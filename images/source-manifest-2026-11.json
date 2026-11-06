@@ -1,0 +1,327 @@
+{
+  "description": "本次新增课件图的实际来源页、提取/裁剪方式与文件指纹；不包含原课件文件。",
+  "assets": [
+    {
+      "path": "images/07-trench-cell.png",
+      "source": "Lecture-7",
+      "source_pages": [
+        14
+      ],
+      "original_media": "image14.emf",
+      "sha256": "c8170ab7e5d1117d03b4c14639589ea0dea2497af934ff04dadaf1b9fa3324e4"
+    },
+    {
+      "path": "images/07-array-large.png",
+      "source": "Lecture-7",
+      "source_pages": [
+        24
+      ],
+      "original_media": "image16.png",
+      "sha256": "d1de3d756eadd938f7ccfa7fff785e12e4c90c02305836f66bd09c8f454b369b"
+    },
+    {
+      "path": "images/07-array-partitioned.png",
+      "source": "Lecture-7",
+      "source_pages": [
+        24
+      ],
+      "original_media": "image17.png",
+      "sha256": "07df188bc1fdeb38f601ce370dc855dbbc9d4c028b20f04e83b142f7217d8b2c"
+    },
+    {
+      "path": "images/07-dram-block.png",
+      "source": "Lecture-7",
+      "source_pages": [
+        36,
+        37
+      ],
+      "original_media": "image25.png",
+      "sha256": "fb462baa1743f2434b8706fb5155cdefe4c3066294ed6a77b9dd325414ac3eea"
+    },
+    {
+      "path": "images/07-activate-timing.png",
+      "source": "Lecture-7",
+      "source_pages": [
+        38
+      ],
+      "original_media": "image26.emf",
+      "sha256": "d45e0ab1b1d172949eab2a03d5c17a877311344e55fba38ecb68b13aa4a46b84"
+    },
+    {
+      "path": "images/07-column-timing.png",
+      "source": "Lecture-7",
+      "source_pages": [
+        39
+      ],
+      "original_media": "image27.emf",
+      "sha256": "472d8f7b10903db8c912a60b917a74517601570cdf8e4104ad03c7d28bb2b05c"
+    },
+    {
+      "path": "images/07-precharge-timing.png",
+      "source": "Lecture-7",
+      "source_pages": [
+        40
+      ],
+      "original_media": "image28.emf",
+      "sha256": "eaf277b9bf310ecf275a25c164ca34cc1ea897aa0ec2c049b4695d34b2000419"
+    },
+    {
+      "path": "images/07-read-cycle.png",
+      "source": "Lecture-7",
+      "source_pages": [
+        41
+      ],
+      "original_media": "image29.png",
+      "sha256": "262f0af5a0e1babb6020afa61bfe595dbcf5f7aa11aa26af26c85a18641b03db"
+    },
+    {
+      "path": "images/07-timing-parameters-a.png",
+      "source": "Lecture-7",
+      "source_pages": [
+        42
+      ],
+      "original_media": "image30.png",
+      "sha256": "733920ad1193056815eee5f1077fa53d43c7fc4a0bbb42da4f39b566d6efd117"
+    },
+    {
+      "path": "images/07-timing-parameters-b.png",
+      "source": "Lecture-7",
+      "source_pages": [
+        42
+      ],
+      "original_media": "image31.png",
+      "sha256": "e54bd7922989ca11752d4054c33549a4bfec82416a2ad73c240c9b7282db0af7"
+    },
+    {
+      "path": "images/07-address-fields.png",
+      "source": "Lecture-7",
+      "source_pages": [
+        67
+      ],
+      "original_media": "image44.png",
+      "sha256": "73438500d90de6005158978b80089daf2741bb3f9b4fdb788a16b0c81a016140"
+    },
+    {
+      "path": "images/07-access-graph.png",
+      "source": "Lecture-7",
+      "source_pages": [
+        68
+      ],
+      "original_media": "image45.PNG",
+      "sha256": "d8d26f9891207979a67942d9efb39e9b4cc29935d0f10e194268bdb0c072aa84"
+    },
+    {
+      "path": "images/07-bim-mappings.png",
+      "source": "Lecture-7",
+      "source_pages": [
+        69
+      ],
+      "original_media": "image47.PNG",
+      "sha256": "4608aff3958eae439a2fd014794f7ddb26bbcb72cb3f8b1d1144004149c74029"
+    },
+    {
+      "path": "images/07-ddr-prefetch.png",
+      "source": "Lecture-7",
+      "source_pages": [
+        87
+      ],
+      "original_media": "image54.png",
+      "sha256": "608e90d1b977156676ebb5a8f5333a2c28f1c8f0976627b768a5f5f31f779be2"
+    },
+    {
+      "path": "images/07-power-trend.png",
+      "source": "Lecture-7",
+      "source_pages": [
+        89
+      ],
+      "original_media": "image55.png",
+      "sha256": "8f89e2513659bf6184ed67a6b86c604638474cc7181c6d945a38324ccd3712c3"
+    },
+    {
+      "path": "images/07-eye-noise.png",
+      "source": "Lecture-7",
+      "source_pages": [
+        97
+      ],
+      "original_media": "image63.jpeg",
+      "sha256": "423a9e264a59dd11e2a3685db5c51b6b99d783962314bd9d3d008f139d922cd1"
+    },
+    {
+      "path": "images/07-access-flow.png",
+      "source": "Lecture-7",
+      "source_pages": [
+        101
+      ],
+      "original_media": "image64.png",
+      "sha256": "c470101ae939de462f2590b374e9495bde8132ce4a5e47ba019a35124fe6624d"
+    },
+    {
+      "path": "images/guest-bandwidth.png",
+      "source": "Guest lecture-1",
+      "source_pages": [
+        15
+      ],
+      "crop_fraction": [
+        0.005,
+        0.3,
+        0.995,
+        0.99
+      ],
+      "sha256": "2518fc1f20b6f954316d50cf1f3a5e9300b5295f17f0de131b6e4fc88c71a30d"
+    },
+    {
+      "path": "images/guest-parallel-decoding.png",
+      "source": "Guest lecture-1",
+      "source_pages": [
+        17
+      ],
+      "crop_fraction": [
+        0.005,
+        0.3,
+        0.995,
+        0.99
+      ],
+      "sha256": "b9894ebb9a4e0b3dfcd057ad069035f13d937b583f805c88bec858a7d6fd9ee0"
+    },
+    {
+      "path": "images/guest-specmamba.png",
+      "source": "Guest lecture-1",
+      "source_pages": [
+        20
+      ],
+      "crop_fraction": [
+        0.005,
+        0.3,
+        0.995,
+        0.99
+      ],
+      "sha256": "43202e660f6f79802453812ee33d44c451433bf833297ec1029cefdb45ef3db5"
+    },
+    {
+      "path": "images/guest-moe-structure.png",
+      "source": "Guest lecture-1",
+      "source_pages": [
+        22
+      ],
+      "crop_fraction": [
+        0.005,
+        0.3,
+        0.995,
+        0.99
+      ],
+      "sha256": "c3d37981c0abcfcf3f3e066fe8d08ebbb772202ca18cd15ba0e42eb1ec8c9b72"
+    },
+    {
+      "path": "images/guest-matmoe.png",
+      "source": "Guest lecture-1",
+      "source_pages": [
+        25
+      ],
+      "crop_fraction": [
+        0.005,
+        0.3,
+        0.995,
+        0.99
+      ],
+      "sha256": "305adc9e23fa880daa3cdae466c3370656b09cca15a1c665aff7b3b5e5ab670b"
+    },
+    {
+      "path": "images/guest-sparse-attention.png",
+      "source": "Guest lecture-1",
+      "source_pages": [
+        28
+      ],
+      "crop_fraction": [
+        0.005,
+        0.3,
+        0.995,
+        0.99
+      ],
+      "sha256": "a9154997297edbd4d5a1f5107a90048f1732d18eda8a13d2cf0e37a4a1a59bb4"
+    },
+    {
+      "path": "images/guest-tot-challenges.png",
+      "source": "Guest lecture-1",
+      "source_pages": [
+        31
+      ],
+      "crop_fraction": [
+        0.005,
+        0.3,
+        0.995,
+        0.99
+      ],
+      "sha256": "6621d61943fa10c6bd7e3ad07b9224b8c533f564fd412d863b7e83938b169da4"
+    },
+    {
+      "path": "images/guest-memory-compute.png",
+      "source": "Guest lecture-1",
+      "source_pages": [
+        35
+      ],
+      "crop_fraction": [
+        0.005,
+        0.16,
+        0.995,
+        0.99
+      ],
+      "sha256": "a0768d4c320d9d0a703481482e19d1ac36a0bd6f88a85084c9a6748e8d7aa6c4"
+    },
+    {
+      "path": "images/guest-hdmoe.png",
+      "source": "Guest lecture-1",
+      "source_pages": [
+        37
+      ],
+      "crop_fraction": [
+        0.005,
+        0.38,
+        0.995,
+        0.99
+      ],
+      "sha256": "07f5af22d967fab513d80bf452d7f60bf65c47abcd23ea8adba7bb95cd5bd079"
+    },
+    {
+      "path": "images/guest-h2eal.png",
+      "source": "Guest lecture-1",
+      "source_pages": [
+        38
+      ],
+      "crop_fraction": [
+        0.005,
+        0.38,
+        0.995,
+        0.99
+      ],
+      "sha256": "848cb1d3533ef05115f844c60fa45b3ffa577be57c84c4df6c2827e14ef8b771"
+    },
+    {
+      "path": "images/guest-hbflex.png",
+      "source": "Guest lecture-1",
+      "source_pages": [
+        39
+      ],
+      "crop_fraction": [
+        0.005,
+        0.38,
+        0.995,
+        0.99
+      ],
+      "sha256": "50f02596d64eed18d0fac7ba914ee9f16880eab110d911fe4f459da22a359571"
+    },
+    {
+      "path": "images/guest-matmoe-demo.png",
+      "source": "Guest lecture-1",
+      "source_pages": [
+        26
+      ],
+      "crop_fraction": [
+        0.1,
+        0.17,
+        0.94,
+        0.96
+      ],
+      "sha256": "9185361b41b2bc1ba8d039d8972a05b25d27943ddd671368bff409db89bebdc6"
+    }
+  ]
+}
